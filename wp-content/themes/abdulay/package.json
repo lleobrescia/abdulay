@@ -33,7 +33,6 @@
   "scripts": {
     "wiredep": "wiredep -s sass/style.scss --dependencies",
     "scss:style": "node-sass --output-style expanded --indent-type tab --indent-width 1 --source-map maps --source-map-contents false --source-map-embed true --precision 6 sass/style.scss ./style.css",
-    "scss:woocommerce": "node-sass --output-style expanded --indent-type tab --indent-width 1 --source-map maps --source-map-contents false --source-map-embed true --precision 6 sass/woocommerce.scss ./woocommerce.css",
     "scss": "run-p  --continue-on-error --print-label --silent --aggregate-output scss:*",
     "autoprefixer": "postcss ./*.css --use autoprefixer -d .",
     "css": "run-s scss autoprefixer",
@@ -46,7 +45,6 @@
     "lang": "echo Update abdulay.pot file & wp-pot --src \"**/*.php\" --dest-file \"languages/abdulay.pot\" --domain abdulay --package \"abdulay\" --bug-report \"leobrescia.com.br\" --team \"Leo Brescia <leonardo@leobrescia.com.br>\"",
     "imagemin": "imagemin images/**/*.{jpg,png} -o dist/images",
     "build-css:style": "node-sass --output-style expanded --indent-type tab --indent-width 1 --source-map maps --source-map-contents true --precision 6 --omit-source-map-url sass/style.scss dist/abdulay/style.css",
-    "build-css:woocommerce": "node-sass --output-style expanded --indent-type tab --indent-width 1 --source-map maps --source-map-contents true --precision 6 --omit-source-map-url sass/woocommerce.scss dist/abdulay/woocommerce.css",
     "build-css": "run-p  --continue-on-error --print-label --silent --aggregate-output build-css:*",
     "build:images": "run-s imagemin",
     "watch:images": "onchange \"images\" -- run-s build:images",
