@@ -1,0 +1,60 @@
+.site-header {
+  &__top {
+    background-color: $color__background-top;
+    color: white;
+    font-size: .8125rem;
+    min-height: 30px;
+    text-align: right;
+
+    @media screen and (min-width: 25rem) {
+      line-height: 32px;
+    }
+
+    span {
+      margin-right: 8px;
+    }
+
+    @media screen and (max-width: 15.625rem) {
+      p {
+        display: block;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    p {
+      display: inline;
+      margin: 0;
+      margin-right: 8px;
+
+      .fa {
+        font-size: .6875rem;
+      }
+    }
+
+    .social-top {
+      display: inline-flex;
+      flex-wrap: wrap;
+
+      &__link {
+        color: $white;
+        padding: 0 4px;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background-color: $white;
+          color: $blue-lighter;
+        }
+
+        .fa {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+
+
+}
