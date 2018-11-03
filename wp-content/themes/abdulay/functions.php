@@ -104,13 +104,16 @@ add_action( 'after_setup_theme', 'abdulay_content_width', 0 );
 function abdulay_scripts() {
   wp_enqueue_style( 'abdulay-fonts', get_template_directory_uri() . '/fonts/stylesheet.css');
 
-  wp_enqueue_style( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js');
-
   wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
-  wp_enqueue_style( 'abdulay-style', get_stylesheet_uri(), array('abdulay-fonts', 'bootstrap', 'font-awesome')  );
 
-	wp_enqueue_script( 'abdulay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+  wp_enqueue_style( 'abdulay-style', get_stylesheet_uri(), array('abdulay-fonts', 'font-awesome')  );
+
+  wp_enqueue_script( 'abdulay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+  wp_enqueue_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array('jquery'), '20151215', true );
+
+  wp_enqueue_script( 'bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js', array('jquery'), '20151215', true );
 
 	wp_enqueue_script( 'abdulay-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

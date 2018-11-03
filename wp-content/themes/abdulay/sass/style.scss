@@ -58,6 +58,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "normalize";
 
 /*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+@import "modules/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
@@ -116,4 +122,3 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
