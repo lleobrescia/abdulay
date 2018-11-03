@@ -1,107 +1,120 @@
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+.navbar {
+  .navbar-toggler {
+    border: none;
+    outline: none;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+    .navbar-toggler-icon {
+      color: $blue;
+      font-size: 1.875rem;
+    }
+  }
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
+  &-abdulay {
+    .navbar-nav {
+      margin: 0;
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
+      .nav-item {
+        &:hover .nav-link .underline {
+          opacity: 1;
+          visibility: visible;
+        }
 
-			a {
-				width: 200px;
-			}
+        .nav-link {
+          color: $blue;
+          font-size: .875rem;
+          letter-spacing: 3px;
+          padding-left: 17px;
+          padding-right: 17px;
+          position: relative;
+          text-decoration: none;
+          text-transform: uppercase;
 
-			:hover > a,
-			.focus > a {
-			}
+          span {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+          }
 
-			a:hover,
-			a.focus {
-			}
-		}
+          .underline {
+            background: $blue;
+            bottom: -5px;
+            height: 2px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+            visibility: hidden;
+            width: 100%;
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
+            @include media-breakpoint-down(sm) {
+              display: none;
+            }
+          }
 
-	li {
-		float: left;
-		position: relative;
+          &:hover {
+            transition: text-decoration 0.5s linear;
 
-		&:hover > a,
-		&.focus > a {
-		}
-	}
+            &>.underline {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
 
-	a {
-		display: block;
-		text-decoration: none;
-	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-}
+      .dropdown--hover {
+        &:hover {
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
+          &>.dropdown-menu--hover {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
+        .nav-link {
+          position: relative;
+          z-index: 2;
+        }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
+        .dropdown-menu--hover {
+          background: transparent;
+          border: 1px solid #f7f5f4;
+          display: block;
+          left: 7.5px;
+          max-width: 175px;
+          opacity: 0;
+          padding-top: 50px;
+          top: 0;
+          transition: visibility 0s, opacity 0.2s linear;
+          visibility: hidden;
+          z-index: 1;
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
+          @include media-breakpoint-down(sm) {
+            border: none;
+            opacity: 1;
+            padding-top: 0;
+            position: relative;
+            visibility: visible;
+          }
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
+          &:hover {
+            opacity: 1;
+            visibility: visible;
+          }
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+          .dropdown-item {
+            color: $blue;
+
+            &:hover {
+              background-color: #f2f1ef;
+
+            }
+          }
+        }
+      }
+    }
+  }
 }
