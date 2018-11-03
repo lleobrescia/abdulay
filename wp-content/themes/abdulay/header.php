@@ -23,21 +23,29 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
+    <?php
+      $tel_fixo = get_field('telefone_fixo', 'option');
+      $tel_celular = get_field('telefone_celular', 'option');
+      $instagram = get_field('instagram', 'option');
+      $facebook = get_field('facebook', 'option');
+      $whatsapp = get_field('link_whatsapp', 'option');
+      $email = get_field('e-mail', 'option');
+    ?>
     <div class="site-header__top">
-      <p>+ 55 21 4102.2655</p>
+      <p><?= $tel_fixo; ?></p>
       <p>
-        <span>|</span>  + 55 21 98058.9955
+        <span>|</span>  <?= $tel_celular; ?>
       <i class="fa fa-whatsapp" aria-hidden="true"></i>
     </p>
-      <p><span>|</span>  contato@draabdulay.com</p>
+      <p><span>|</span>  <?= $email; ?></p>
       <div class="social-top">
-        <a class="social-top__link" href="" target="_blank" rel="external" title="">
+        <a class="social-top__link" href="<?= $instagram; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Instagram">
           <i class="fa fa-instagram" aria-hidden="true"></i>
         </a>
-        <a class="social-top__link" href="" target="_blank" rel="external" title="">
+        <a class="social-top__link" href="<?= $facebook; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Facebook">
           <i class="fa fa-facebook-square" aria-hidden="true"></i>
         </a>
-        <a class="social-top__link" href="" target="_blank" rel="external" title="">
+        <a class="social-top__link" href="<?= $whatsapp; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Whatsapp">
           <i class="fa fa-whatsapp" aria-hidden="true"></i>
         </a>
       </div>
