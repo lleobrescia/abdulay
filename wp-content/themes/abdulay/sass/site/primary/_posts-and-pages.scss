@@ -1,22 +1,84 @@
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
+.page {
+  &-links {
+    clear: both;
+    margin: 0 0 1.5em;
+  }
+
+  &-content {
+    margin: 1.5em 0 0;
+  }
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+.entry {
+
+  &-summary,
+  &-content {
+    clear: both;
+    margin: 0 0 1.5em;
+  }
+
+  &-title {
+    color: $blue;
+    display: inline-block;
+    font-family: $font__sec;
+    font-size: 3rem;
+    margin-bottom: 13px;
+    position: relative;
+    z-index: 2;
+
+    &--has-line {
+      margin-bottom: 52px;
+
+      &::after {
+        background-color: $blue;
+        content: "";
+        height: 14px;
+        position: absolute;
+        width: 189px;
+        z-index: 2;
+        left: -15%;
+        bottom: -21px;
+      }
+    }
+
+    &--has-bg {
+      @include media-breakpoint-up(sm) {
+        margin-top: 71px;
+      }
+
+      span {
+        position: relative;
+        z-index: 2;
+      }
+
+      &::before {
+        background-color: $color__background-title;
+        bottom: 0;
+        content: "";
+        height: 254px;
+        left: -50%;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        width: 280px;
+        z-index: 1;
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+    }
+  }
 }
