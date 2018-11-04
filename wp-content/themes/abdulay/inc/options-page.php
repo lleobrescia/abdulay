@@ -14,8 +14,8 @@ function abdulay_acf_init()
 {
   if (function_exists('acf_add_options_page')) {
     acf_add_options_page(array(
-      'page_title' => __('Theme Information', 'abdulay'),
-      'menu_title' => __('Theme Information', 'abdulay'),
+      'page_title' => __('Informações do Site', 'abdulay'),
+      'menu_title' => __('Informações do Site', 'abdulay'),
       'menu_slug' => 'information',
       'capability' => 'edit_posts'
     ));

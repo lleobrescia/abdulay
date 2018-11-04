@@ -9,23 +9,86 @@
  * @package abdulay
  */
 
+$tel_fixo    = get_field('telefone_fixo', 'option');
+$tel_celular = get_field('telefone_celular', 'option');
+$instagram   = get_field('instagram', 'option');
+$facebook    = get_field('facebook', 'option');
+$twitter     = get_field('link_do_twitter', 'option');
+$linkedin    = get_field('link_do_linkedin', 'option');
+$whatsapp    = get_field('link_whatsapp', 'option');
+$email       = get_field('e-mail', 'option');
+$end         = get_field('endereço', 'option');
 ?>
 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'abdulay' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'abdulay' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'abdulay' ), 'abdulay', '<a href="https://automattic.com/">Automattic</a>' );
-				?>
+		<div class="container">
+      <div class="row">
+        <section class="col-lg-10 footer offset-lg-1">
+          <dir class="row row--footer">
+            <section class="col-sm-4 col-lg-3 offset-lg-1 p-0">
+              <a href="" class="footer__chamada">
+                Agende sua <br>
+                consulta aqui &gt;
+              </a>
+            </section><!-- col-sm-3 -->
+
+            <section class="col-sm-5 offset-sm-1 footer__contato p-0">
+              <br class="d-block d-md-none">
+              <h3>contato e atendimento</h3>
+
+              <div class="row">
+                <div class="col-lg-5">
+                  <?= $tel_fixo; ?> <br>
+                  <?= $tel_celular; ?> <i class="fa fa-whatsapp" aria-hidden="true"></i><br>
+                  <?= $email; ?> <br>
+                </div><!-- col-lg-5 -->
+                <div class="col-lg-7">
+                  <br class="d-lg-none">
+                  <?= $end; ?>
+                </div><!-- col-lg-7 -->
+              </div><!-- row -->
+            </section><!-- col-sm-4 -->
+
+            <section class="footer__social">
+              <br class="d-block d-md-none">
+              <div class="footer__social-single">
+                <a href="<?= $facebook; ?>" title="Abdulay Eziquiel Facebook" rel="external" target="_blank">
+                  <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+                <a href="<?= $instagram; ?>" title="Abdulay Eziquiel Instagram" rel="external" target="_blank">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="<?= $whatsapp; ?>" title="Abdulay Eziquiel Whatsapp" rel="external" target="_blank">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="footer__social-single">
+                <a href="<?= $twitter; ?>" title="Abdulay Eziquiel Twitter" rel="external" target="_blank">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="<?= $linkedin; ?>" title="Abdulay Eziquiel LinkedIn" rel="external" target="_blank">
+                  <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </section><!-- footer__social -->
+          </dir><!-- row -->
+
+          <div class="row footer__bottom">
+            <div class="col-lg-10 offset-lg-1">
+              &copy
+              <?= date("Y"); ?>
+              | Dra. Abdulay Eziquiel
+
+              <a href="https://sitedacasa.com/" rel="external" target="_blank">
+                casa2 design
+              </a>
+            </div>
+          </div>
+        </section><!-- footer -->
+      </div><!-- row -->
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

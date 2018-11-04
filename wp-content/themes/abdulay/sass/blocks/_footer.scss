@@ -1,0 +1,102 @@
+.site-footer {
+  color: #fffaf8;
+
+  a {
+    color: #fffaf8;
+  }
+
+  .footer {
+    background-color: $color__background-footer;
+    min-height: 146px;
+    padding-top: 54px;
+
+    .row--footer {
+      @include media-breakpoint-up(lg) {
+        padding: 0;
+      }
+    }
+
+    &__chamada {
+      color: #fffaf8;
+      font-family: $font__sec;
+      font-size: 1.875rem;
+      font-weight: 300;
+      line-height: 30px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__contato {
+      font-size: .8125rem;
+
+      h3 {
+        font-size: .875rem;
+        margin-bottom: 15px;
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+    }
+
+    &__social {
+      text-align: right;
+      width: 75px;
+
+      @include media-breakpoint-down(md) {
+        -webkit-box-flex: 1;
+        flex-basis: 0;
+        flex-grow: 1;
+        -ms-flex-positive: 1;
+        -ms-flex-preferred-size: 0;
+        max-width: 100%;
+        text-align: left;
+      }
+
+
+      &-single {
+        display: inline-block;
+        margin-right: 7px;
+
+        a {
+          color: #fffaf8;
+          text-decoration: none;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .fa {
+        margin-right: 7px;
+
+        @include media-breakpoint-up(sm) {
+          display: block;
+          margin-right: 0;
+        }
+
+
+        font-size: 1.1875rem;
+        margin-bottom: 8px;
+      }
+    }
+
+    &__bottom {
+      .col-lg-10 {
+        border-top: solid 1px $color__background-hr;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: .8125rem;
+
+        a {
+          color: #fffaf8;
+          text-transform: uppercase;
+          float: right;
+          font-size: .6875rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
