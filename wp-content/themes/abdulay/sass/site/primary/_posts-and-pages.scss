@@ -19,6 +19,10 @@
   &-content {
     margin: 1.5em 0 0;
   }
+
+  &-template-page-faq {
+    background: url('images/page-bg.png') no-repeat right 131px $color__background-body;
+  }
 }
 
 .entry {
