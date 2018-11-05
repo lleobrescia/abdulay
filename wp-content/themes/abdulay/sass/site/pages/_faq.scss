@@ -1,0 +1,24 @@
+.faq {
+  position: relative;
+  z-index: 2;
+
+  &__title {
+    color: $blue;
+    font-size: .9375rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  &__content {
+    color: $color__text-main;
+    font-size: .9375rem;
+    line-height: 16px;
+    margin-bottom: 23px;
+    padding-left: 1rem;
+
+    p {
+      margin: 0;
+    }
+  }
+}
