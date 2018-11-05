@@ -20,7 +20,8 @@
     margin: 1.5em 0 0;
   }
 
-  &-template-page-faq {
+  &-template-page-faq,
+  &-template-page-contact {
     background: url('images/page-bg.png') no-repeat right 131px $color__background-body;
   }
 }
@@ -42,9 +43,10 @@
     position: relative;
     z-index: 2;
     line-height: 1.0;
+    font-weight: bold;
 
     &--has-line {
-      margin-bottom: 52px;
+      margin-bottom: 48px;
 
       &::after {
         background-color: $blue;
@@ -53,14 +55,14 @@
         position: absolute;
         width: 189px;
         z-index: 2;
-        left: -15%;
+        left: -23px;
         bottom: -21px;
       }
     }
 
     &--has-bg {
       @include media-breakpoint-up(sm) {
-        margin-top: 71px;
+        margin-top: 45px;
       }
 
       span {
@@ -72,11 +74,11 @@
         background-color: $color__background-title;
         bottom: 0;
         content: "";
-        height: 254px;
-        left: -50%;
+        height: 256px;
+        left: -66px;
         margin: auto;
         position: absolute;
-        top: 0;
+        top: 67px;
         width: 280px;
         z-index: 1;
 
