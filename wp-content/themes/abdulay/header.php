@@ -91,7 +91,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?= get_site_url(null, '/perguntas-frequentes/'); ?>">
                 <span>
                 Pergunstas Frequentes
                 <div class="underline"></div>
