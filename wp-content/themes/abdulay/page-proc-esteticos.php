@@ -78,7 +78,10 @@ function tirarAcentos($string){
 
             <div class="see-more">
               <h4>veja também</h4>
-              <a href="">Procedimentos para o Corpo  &gt;</a>
+              <a href="<?= get_site_url(null, '/procedimentos-para-o-rosto/'); ?>">Procedimentos para o rosto &gt;</a>
+              <a href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>">Procedimentos para o corpo &gt;</a>
+              <a href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>">Procedimentos para a mama &gt;</a>
+
             </div><!-- see-more -->
           </div> <!-- col-md-6 -->
         </div><!-- row -->
@@ -96,7 +99,7 @@ function tirarAcentos($string){
 
             <p>Conheça nosso espaço e converse comigo para obter mais informações!</p>
 
-            <a href="" class="chamada__button btn btn-outline-primary">
+            <a href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" class="chamada__button btn btn-outline-primary">
               clique aqui para agendar uma data
             </a>
           </div><!-- col-md-4  -->

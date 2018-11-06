@@ -78,28 +78,29 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown dropdown--hover">
-              <a class="nav-link" href="" >
+              <a class="nav-link" href="#" >
                 <span>
                 Procedimentos
                 <div class="underline"></div>
                 </span>
               </a>
               <div class="dropdown-menu dropdown-menu--hover" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-rosto/'); ?>">Face</a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>">Corpo</a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>">Mama</a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>">Estéticos</a>
               </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= get_site_url(null, '/perguntas-frequentes/'); ?>">
                 <span>
-                Pergunstas Frequentes
+                Perguntas Frequentes
                 <div class="underline"></div>
                 </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?= get_site_url(null, '/sobre/'); ?>">
                 <span>
                 Sobre
                 <div class="underline"></div>
@@ -107,7 +108,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="http://blog.draabdulay.com.br" target="_blank">
                 <span>
                 Blog
                 <div class="underline"></div>
@@ -115,7 +116,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?= get_site_url(null, '/contato/'); ?>">
                 <span>
                 Contato
                 <div class="underline"></div>
@@ -123,7 +124,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>">
                 <span>
                 Agende sua Consulta
                 <div class="underline"></div>
