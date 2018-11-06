@@ -32,7 +32,7 @@ function tirarAcentos($string){
               <h1 class="entry-title ">
                 <span>
                 Procedimentos <br>
-                para o estéticos
+                estéticos
                 </span>
               </h1>
             </header><!-- .entry-header -->
