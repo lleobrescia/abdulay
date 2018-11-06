@@ -27,7 +27,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> ng-app="app">
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
     <?php

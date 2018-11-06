@@ -65,13 +65,3 @@ function abdulay_change_default_title($title)
 }
 add_filter( 'enter_title_here', 'abdulay_change_default_title' );
 
-
-function abdulay_hide_permalinks($return, $post_id, $new_title, $new_slug, $post)
-{
-    if($post->post_type == 'faq') {
-        return '';
-    }
-    return $return;
-}
-
-add_filter('get_sample_permalink_html', 'abdulay_hide_permalinks', 10, 5);

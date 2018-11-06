@@ -110,6 +110,20 @@ function abdulay_menu_page_removing() {
 add_action( 'admin_menu', 'abdulay_menu_page_removing' );
 
 /**
+ * Remove permalinks
+ */
+function abdulay_hide_permalinks($return, $post_id, $new_title, $new_slug, $post)
+{
+    if($post->post_type == 'faq'
+    || $post->post_type == 'procedimento') {
+        return '';
+    }
+    return $return;
+}
+
+add_filter('get_sample_permalink_html', 'abdulay_hide_permalinks', 10, 5);
+
+/**
  * Enqueue scripts and styles.
  */
 function abdulay_scripts() {
@@ -123,6 +137,8 @@ function abdulay_scripts() {
   wp_enqueue_style( 'abdulay-style', get_stylesheet_uri(), array('abdulay-fonts', 'font-awesome', 'bxslider')  );
 
   wp_enqueue_script( 'abdulay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+  wp_enqueue_script( 'angularjs', 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js' );
 
   wp_enqueue_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array('jquery'), '20151215', true );
 
@@ -175,4 +191,9 @@ require get_template_directory() . '/inc/options-page.php';
  * Custom post FAQ
  */
 require get_template_directory() . '/inc/faq-post-type.php';
+
+/**
+ * Custom post Procedimentos
+ */
+require get_template_directory() . '/inc/procedimento-post-type.php';
 
