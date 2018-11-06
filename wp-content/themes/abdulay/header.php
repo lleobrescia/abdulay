@@ -59,7 +59,7 @@
         </div><!-- social-top -->
       </div><!-- container-fluid -->
     </div><!-- site-header__top -->
-    <nav id="site-navigation" class="navbar-abdulay bg-light navbar navbar-expand-md ">
+    <nav id="site-navigation" class="navbar-abdulay navbar navbar-expand-md ">
       <?php
         $custom_logo_id = get_theme_mod('custom_logo');
         $logo = wp_get_attachment_image($custom_logo_id, 'full');
