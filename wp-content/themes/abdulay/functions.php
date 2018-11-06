@@ -99,6 +99,17 @@ function abdulay_content_width() {
 add_action( 'after_setup_theme', 'abdulay_content_width', 0 );
 
 /**
+ * Remove menu item from admin dashboard
+ *
+ * https://codex.wordpress.org/Function_Reference/remove_menu_page
+ */
+function abdulay_menu_page_removing() {
+  remove_menu_page( 'edit.php' );                   //Posts
+  remove_menu_page( 'edit-comments.php' );          //Comments
+}
+add_action( 'admin_menu', 'abdulay_menu_page_removing' );
+
+/**
  * Enqueue scripts and styles.
  */
 function abdulay_scripts() {
