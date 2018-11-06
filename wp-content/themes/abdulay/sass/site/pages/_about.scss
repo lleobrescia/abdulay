@@ -1,0 +1,23 @@
+.about {
+  .consultorio {
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    .bx-wrapper {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__photo {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    img {
+      @include media-breakpoint-up(md) {
+        margin-top: -90px;
+      }
+    }
+  }
+}
