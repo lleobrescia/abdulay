@@ -1,0 +1,11 @@
+.booking {
+  .entry {
+    &-title {
+      &--has-bg {
+        &::before {
+          left: -108px;
+        }
+      }
+    }
+  }
+}

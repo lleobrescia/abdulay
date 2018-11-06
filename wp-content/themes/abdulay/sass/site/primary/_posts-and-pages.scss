@@ -16,13 +16,29 @@
     margin: 0 0 1.5em;
   }
 
-  &-content {
-    margin: 1.5em 0 0;
-  }
+
 
   &-template-page-faq,
-  &-template-page-contact {
+  &-template-page-contact,
+  &-template-page-booking {
     background: url('images/page-bg.png') no-repeat right 131px $color__background-body;
+  }
+}
+
+.site {
+  &-main {
+    position: relative;
+    z-index: 2;
+
+  }
+
+  &-content {
+    margin: 1.5em 0 0;
+    color: $color__text-main;
+
+    p {
+      font-size: .9375rem;
+    }
   }
 }
 
