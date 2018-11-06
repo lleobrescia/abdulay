@@ -2,6 +2,16 @@
   position: relative;
   z-index: 2;
 
+  .entry {
+    &-title {
+      &--has-bg {
+        &::before {
+          left: -96px;
+        }
+      }
+    }
+  }
+
   &__title {
     color: $blue;
     font-size: .9375rem;
