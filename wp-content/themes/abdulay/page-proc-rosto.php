@@ -22,7 +22,7 @@ function tirarAcentos($string){
    return preg_replace('/\s+/', '', $string);
 }
 ?>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
 	<div id="primary" class="content-area proc" ng-controller="ProcController as proc">
 		<main id="main" class="site-main">
       <div class="container">

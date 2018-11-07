@@ -138,8 +138,6 @@ function abdulay_scripts() {
 
   wp_enqueue_script( 'abdulay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-  wp_enqueue_script( 'angularjs', 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js' );
-
   wp_enqueue_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array('jquery'), '20151215', true );
 
   wp_enqueue_script( 'bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js', array('jquery'), '20151215', true );
