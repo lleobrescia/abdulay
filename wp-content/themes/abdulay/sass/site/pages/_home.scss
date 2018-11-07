@@ -1,0 +1,95 @@
+.home {
+
+  &-title {}
+
+  &-slider {}
+
+  &-sobre {}
+
+  &-proc {}
+
+  &-depo {
+    margin-top: 30px;
+    margin-bottom: 103px;
+
+    &__container {
+      min-height: 300px;
+      padding-top: 116px;
+      background: url('images/dep-bg.png') no-repeat right center;
+
+      .entry-title {
+        font-size: 2.6875rem;
+        margin-bottom: 23px;
+      }
+
+      .bx-wrapper {
+        background: transparent;
+
+        .bx-controls-direction {
+          position: absolute;
+          right: 222px;
+          bottom: 20px;
+          display: none;
+
+          @include media-breakpoint-up(md) {
+            display: block;
+          }
+
+          a {
+            bottom: 41px;
+            top: auto;
+          }
+
+          .bx-next {
+            background: url('images/right-arrow-blue.png') no-repeat;
+          }
+
+          .bx-prev {
+            background: url('images/left-arrow-blue.png') no-repeat;
+            right: 79px;
+            left: auto;
+          }
+        }
+
+        .bx-viewport {
+          min-height: 222px;
+
+          .slide-depo {
+            margin: 0;
+
+            p {
+              padding-right: 118px;
+              margin-bottom: 49px;
+            }
+
+            &__nome {
+              color: $blue;
+              font-size: .9375rem;
+              max-width: 265px;
+              position: relative;
+              left: 155px;
+
+              hr {
+                margin: 0;
+                background: #abc5c5;
+                margin-top: 0;
+                margin-bottom: 17px;
+              }
+
+              h4 {
+                margin-bottom: 5px;
+                margin-top: 0;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-loca {}
+
+}

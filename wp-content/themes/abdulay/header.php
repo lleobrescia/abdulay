@@ -108,7 +108,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://blog.draabdulay.com.br" target="_blank">
+              <a class="nav-link" href="http://blog.draabdulay.com" target="_blank">
                 <span>
                 Blog
                 <div class="underline"></div>
