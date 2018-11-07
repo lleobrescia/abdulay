@@ -1,12 +1,89 @@
 .home {
-
   &-title {}
 
   &-slider {}
 
   &-sobre {}
 
-  &-proc {}
+  &-proc {
+    &::before {
+      content: "";
+      background: url("images/proc-bg.png") no-repeat center;
+      width: 411px;
+      height: 378px;
+      position: absolute;
+      right: 211px;
+      top: 69px;
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    .entry {
+      &-title {
+        z-index: 0;
+        margin-bottom: 59px;
+        font-size: 2.5625rem;
+        margin-top: 101px;
+
+        &--has-bg {
+          &::before{
+            top: -91px;
+            left: auto;
+            width: 190px;
+            height: 194px;
+            right: 80px;
+          }
+        }
+      }
+    }
+
+    &__single {
+      position: relative;
+      max-width: 264px;
+      height: 372px;
+      margin: auto;
+      background-repeat: no-repeat;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 10px;
+      }
+    }
+
+    &__title {
+      font-size: .9375rem;
+      font-weight: bold;
+      color: #fffaf8;
+      text-transform: uppercase;
+      top: 31px;
+      left: 16px;
+      display: block;
+      position: relative;
+      margin: 0;
+    }
+
+    &__footer {
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 20px;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      text-align: right;
+
+      hr {
+        background: #ededed;
+        margin-bottom: 6px;
+      }
+
+      a {
+        color: #fffaf8;
+        font-weight: 500;
+      }
+    }
+  }
 
   &-depo {
     margin-top: 30px;
@@ -15,7 +92,7 @@
     &__container {
       min-height: 300px;
       padding-top: 116px;
-      background: url('images/dep-bg.png') no-repeat right center;
+      background: url("images/dep-bg.png") no-repeat right center;
 
       .entry-title {
         font-size: 2.6875rem;
@@ -35,17 +112,18 @@
             display: block;
           }
 
+
           a {
             bottom: 41px;
             top: auto;
           }
 
           .bx-next {
-            background: url('images/right-arrow-blue.png') no-repeat;
+            background: url("images/right-arrow-blue.png") no-repeat;
           }
 
           .bx-prev {
-            background: url('images/left-arrow-blue.png') no-repeat;
+            background: url("images/left-arrow-blue.png") no-repeat;
             right: 79px;
             left: auto;
           }
@@ -91,5 +169,4 @@
   }
 
   &-loca {}
-
 }

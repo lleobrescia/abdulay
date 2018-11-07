@@ -23,6 +23,71 @@ get_header();
       <section class="home-sobre">
       </section><!-- home-sobre -->
       <section class="home-proc">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 offset-2">
+              <h2 class="entry-title entry-title--has-bg">
+                <span>
+                Conheça os nossos <br> procedimentos
+                </span>
+              </h2>
+            </div><!-- col-md-10 -->
+          </div><!-- row -->
+
+          <section class="row">
+            <?php
+            $rosto     = get_field('procedimento_rosto');
+            $corpo     = get_field('procedimento_corpo');
+            $mama      = get_field('procedimento_mama');
+            $esteticos = get_field('procedimento_esteticos');
+            ?>
+            <section class="col-md-3" >
+              <div class="home-proc__single" style="background: url('<?= $rosto['url']; ?>')">
+                <h4 class="home-proc__title">
+                  ROSTO
+                </h4>
+
+                <footer class="home-proc__footer">
+                  <hr>
+                  <a href="" title="Saiba mais">Saiba mais &gt;</a>
+                </footer><!-- home-proc__footer -->
+              </div><!-- home-proc__single -->
+            </section><!-- col-md-3 -->
+            <section class="col-md-3" >
+              <div class="home-proc__single" style="background: url('<?= $corpo['url']; ?>')">
+                <h4 class="home-proc__title">
+                  CORPO
+                </h4>
+                <footer class="home-proc__footer">
+                  <hr>
+                  <a href="" title="Saiba mais">Saiba mais &gt;</a>
+                </footer><!-- home-proc__footer -->
+              </div><!-- home-proc__single -->
+            </section><!-- col-md-3 -->
+            <section class="col-md-3" >
+             <div class="home-proc__single" style="background: url('<?= $mama['url']; ?>')">
+                <h4 class="home-proc__title">
+                  MAMA
+                </h4>
+                <footer class="home-proc__footer">
+                  <hr>
+                  <a href="" title="Saiba mais">Saiba mais &gt;</a>
+                </footer><!-- home-proc__footer -->
+              </div><!-- home-proc__single -->
+            </section><!-- col-md-3 -->
+            <section class="col-md-3" >
+             <div class="home-proc__single" style="background: url('<?= $esteticos['url']; ?>')">
+              <h4 class="home-proc__title">
+                  ESTÉTICOS
+                </h4>
+                <footer class="home-proc__footer">
+                  <hr>
+                  <a href="" title="Saiba mais">Saiba mais &gt;</a>
+                </footer><!-- home-proc__footer -->
+              </div><!-- home-proc__single -->
+            </section><!-- col-md-3 -->
+          </div><!-- row -->
+        </div><!-- container -->
       </section><!-- home-proc -->
 		</main><!-- #main -->
 
