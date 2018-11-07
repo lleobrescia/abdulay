@@ -16,12 +16,37 @@ get_header();
 ?>
 
 
-	<div id="primary" class="content-area home">
+	<div id="primary" class="content-area">
     <section class="home-slider">
     </section><!-- home-slider -->
 		<main id="main" class="site-main">
       <section class="home-sobre">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-block">
+              <img src="<?= get_template_directory_uri() ?>/images/foto-home.png" alt="Dra. Abdulay Eziquiel">
+            </div><!-- col-md-5 -->
+            <div class="col-md-7 col-lg-6 home-sobre__text">
+              <h2 class="entry-title">
+                <span>
+                 Sobre mim
+                </span>
+              </h2>
+              <?php the_field('sobre_mim'); ?>
+
+              <div class="home-sobre__nome">
+                <hr>
+                <p>
+                  Cirurgiã Plástica Estética e Reparadora <br> Membro da Sociedade Brasileira de Cirugia Plástica
+
+                </p>
+              </div><!-- home-sobre__nome -->
+            </div><!-- col-md-7 -->
+
+          </div><!-- row -->
+        </div><!-- container -->
       </section><!-- home-sobre -->
+
       <section class="home-proc">
         <div class="container">
           <div class="row">

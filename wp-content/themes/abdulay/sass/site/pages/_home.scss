@@ -1,11 +1,56 @@
 .home {
+  background: url('images/home-bg.png') no-repeat left center;
+
   &-title {}
 
   &-slider {}
 
-  &-sobre {}
+  &-sobre {
+    margin-bottom: 135px;
+
+    .entry-title {
+      font-size: 43px;
+      margin-top: 155px;
+      margin-bottom: 17px;
+      padding-left: 105px;
+    }
+
+    &__text {
+      background: url('images/assinatura.png') no-repeat right 204px;
+      padding-bottom: 77px;
+
+      p {
+        font-size: .9375rem;
+        color: #626462;
+        max-width: 481px;
+        margin-bottom: 25px;
+        padding-left: 105px;
+      }
+    }
+
+    &__nome {
+      margin-top: 82px;
+
+      hr {
+        background: #abc5c5;
+        margin-top: 0;
+        margin-bottom: 11px;
+        max-width: 265px;
+        margin-left: 0;
+      }
+
+      p {
+        margin: 0;
+        font-size: 15px;
+        color: #619495;
+        padding: 0;
+      }
+    }
+  }
 
   &-proc {
+    position: relative;
+
     &::before {
       content: "";
       background: url("images/proc-bg.png") no-repeat center;
@@ -28,7 +73,7 @@
         margin-top: 101px;
 
         &--has-bg {
-          &::before{
+          &::before {
             top: -91px;
             left: auto;
             width: 190px;
