@@ -16,10 +16,11 @@ get_header();
 ?>
 
 
-	<div id="primary" class="content-area">
+  <div id="primary" class="content-area">
     <section class="home-slider">
     </section><!-- home-slider -->
-		<main id="main" class="site-main">
+
+    <main id="main" class="site-main">
       <section class="home-sobre">
         <div class="container">
           <div class="row">
@@ -114,7 +115,7 @@ get_header();
           </div><!-- row -->
         </div><!-- container -->
       </section><!-- home-proc -->
-		</main><!-- #main -->
+    </main><!-- #main -->
 
     <section class="home-depo">
       <div class="container">
@@ -160,8 +161,34 @@ get_header();
     </section><!-- home-depo -->
 
     <section class="home-loca">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 oofest-lg-1">
+            <h3 class="entry-title entry-title--has-bg">
+              <span>
+                Localização e <br> atendimento
+              </span>
+            </h3>
+
+            <div class="home-loca__end">
+            <?php the_field("localização_e_atendimento"); ?>
+            </div><!-- home-loca__end -->
+
+            <div class="home-loca__address">
+              <h4>Rio de Janeiro</h4>
+                <address>
+                <?= get_field('endereço', 'option'); ?>
+                </address>
+            </div>
+          </div><!-- col-md-5 -->
+
+          <div class="col-md-6 col-lg-5 offset-lg-1 home-loca__map">
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="476" height="526" id="gmap_canvas" src="https://maps.google.com/maps?q=Av.%20Ataulfo%20de%20Paiva%2C%20135&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div><style>.mapouter{text-align:right;height:526px;width:476px;}.gmap_canvas {overflow:hidden;background:none!important;height:526px;width:476px;}</style></div>
+          </div>
+        </div><!-- row -->
+      </div><!-- container -->
     </section><!-- home-loca -->
-	</div><!-- #primary -->
+  </div><!-- #primary -->
 
 <script>
   jQuery(document).ready(function(){

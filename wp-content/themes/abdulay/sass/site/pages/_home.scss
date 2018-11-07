@@ -1,5 +1,5 @@
 .home {
-  background: url('images/home-bg.png') no-repeat left center;
+  background: url("images/home-bg.png") no-repeat left center;
 
   &-title {}
 
@@ -16,7 +16,7 @@
     }
 
     &__text {
-      background: url('images/assinatura.png') no-repeat right 204px;
+      background: url("images/assinatura.png") no-repeat right 204px;
       padding-bottom: 77px;
 
       p {
@@ -157,7 +157,6 @@
             display: block;
           }
 
-
           a {
             bottom: 41px;
             top: auto;
@@ -213,5 +212,68 @@
     }
   }
 
-  &-loca {}
+  &-loca {
+    min-height: 942px;
+    margin-bottom: -214px;
+    padding-bottom: 214px;
+    padding-top: 95px;
+    margin-top: 103px;
+    background: url("images/localizacao-home.png") no-repeat center;
+    background-size: cover;
+
+    &__end {
+      p {
+        font-size: .9375rem;
+        color: #fffaf8;
+        margin: 0;
+      }
+    }
+
+    &__address {
+      margin-top: 43px;
+
+      h4 {
+        color: #fffaf8;
+        font-size: .875rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin-bottom: 9px;
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+
+      address {
+        color: #fffaf8;
+        font-family: texta, sans-serif;
+        font-size: .9375rem;
+        line-height: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    .entry {
+      &-title {
+        &--has-bg {
+          font-size: 2.5625rem;
+          color: #fffaf8;
+          margin-top: 111px;
+          margin-bottom: 29px;
+
+          &::before {
+            width: 172px;
+            height: 172px;
+            background-color: #619495;
+            top: -130px;
+            left: -86px;
+          }
+        }
+      }
+    }
+
+    &__map {
+      @include media-breakpoint-down(md) {
+        margin-top: 10px;
+      }
+    }
+  }
 }
