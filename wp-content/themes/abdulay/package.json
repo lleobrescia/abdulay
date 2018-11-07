@@ -45,12 +45,11 @@
     "lint": "jscs js",
     "watch:css": "onchange \"sass\" -- run-s scss autoprefixer",
     "watch": "run-p serve watch:*",
-    "lang": "echo Update abdulay.pot file & wp-pot --src \"**/*.php\" --dest-file \"languages/abdulay.pot\" --domain abdulay --package \"abdulay\" --bug-report \"leobrescia.com.br\" --team \"Leo Brescia <leonardo@leobrescia.com.br>\"",
     "imagemin": "imagemin images/**/*.{jpg,png} -o dist/images",
     "build-css:style": "node-sass --output-style expanded --indent-type tab --indent-width 1 --source-map maps --source-map-contents true --precision 6 --omit-source-map-url sass/style.scss dist/abdulay/style.css",
     "build-css": "run-p  --continue-on-error --print-label --silent --aggregate-output build-css:*",
     "build:images": "run-s imagemin",
-    "build": "run-s -l lang clean copy build-css:* archive",
+    "build": "run-s -l clean copy build-css:* archive",
     "clean": "rimraf dist/**/*",
     "copy": "copyfiles --exclude \"dist/**\" --exclude \"maps/**\" --exclude \"node_modules/**\" --exclude \"sass/**\" --exclude \"package-lock.json\" --exclude \"package.json\" --exclude \"bower_components/**\" *.* **/**  dist/abdulay && echo Files copied.",
     "archive": "echo Create abdulay.zip & cross-zip dist/abdulay dist/abdulay.zip"
