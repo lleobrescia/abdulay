@@ -18,9 +18,37 @@ get_header();
 
   <div id="primary" class="content-area">
     <section class="home-slider">
+      <div class="home-slider__container">
+        <ul class="bxslider--slide">
+      <?php
+          // check if the repeater field has rows of data
+          if( have_rows('slide') ):
+            // loop through the rows of data
+            while ( have_rows('slide') ) : the_row();
+        ?>
+        <li>
+          <div class="home-slider__text">
+            <div>
+              <h2 class="entry-title"><?php the_sub_field('titulo'); ?></h2>
+              <hr>
+              <?php the_sub_field('texto'); ?>
+            </div>
+          </div>
+          <img src="<?= get_sub_field('imagem')['url']; ?>" alt="">
+        </li>
+         <?php
+            endwhile;
+          else :
+              // no rows found
+          endif;
+        ?>
+         </ul>
+      </div><!-- home-slider__container -->
+      <div style="clear:both"></div>
     </section><!-- home-slider -->
 
     <main id="main" class="site-main">
+
       <section class="home-sobre">
         <div class="container">
           <div class="row">
@@ -195,6 +223,14 @@ get_header();
     jQuery('.bxslider--depo').bxSlider({
       pager: false,
       auto: true
+    });
+  });
+  jQuery(document).ready(function(){
+    jQuery('.bxslider--slide').bxSlider({
+      pager: false,
+      auto: true,
+      nextText: " ",
+      prevText: " "
     });
   });
 </script>

@@ -1,17 +1,104 @@
 .home {
   background: url("images/home-bg.png") no-repeat left center;
 
-  &-title {}
+  &-slider {
+    margin-bottom: 90px;
 
-  &-slider {}
+    .entry-title {
+      font-size: 2.5625rem;
+      font-weight: 400;
+      margin: 0;
+      max-width: 525px;
+    }
+
+    img {
+      display: initial;
+    }
+
+    &__container {
+      float: right;
+      position: relative;
+      text-align: right;
+      width: 100%;
+
+      li {
+        transition: opacity 2s;
+      }
+
+      li[aria-hidden="true"] {
+        opacity: 0;
+      }
+
+      .bx-controls-direction {
+        width: 75px;
+        position: absolute;
+        right: 627px;
+        bottom: 83px;
+      }
+
+      .bx-next {
+        background: url("images/right-arrow-blue.png") no-repeat;
+      }
+
+      .bx-prev {
+        background: url("images/left-arrow-blue.png") no-repeat;
+        left: -25px;
+      }
+    }
+
+    &__text {
+      align-items: center;
+      bottom: 0;
+      display: flex;
+      margin: auto;
+      position: absolute;
+      top: 0;
+
+      @include media-breakpoint-up(md) {
+        right: 617px;
+      }
+
+      &::before {
+        content: "";
+        width: 381px;
+        height: 401px;
+        background: url('images/bg-title.png') no-repeat center;
+        position: absolute;
+        left: -50px;
+
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+      }
+
+      div {
+        position: relative;
+        z-index: 9;
+      }
+
+      hr {
+        margin-bottom: 15px;
+        margin-top: 10px;
+        max-width: 400px;
+        margin-left: 0;
+      }
+
+      p {
+        max-width: 400px;
+        font-size: 15px;
+        color: #626462;
+      }
+    }
+  }
 
   &-sobre {
     margin-bottom: 135px;
+    padding-top: 90px;
 
     .entry-title {
       font-size: 43px;
-      margin-top: 155px;
       margin-bottom: 17px;
+      margin-top: 155px;
       padding-left: 105px;
     }
 
@@ -20,10 +107,10 @@
       padding-bottom: 77px;
 
       p {
-        font-size: .9375rem;
         color: #626462;
-        max-width: 481px;
+        font-size: .9375rem;
         margin-bottom: 25px;
+        max-width: 481px;
         padding-left: 105px;
       }
     }
@@ -33,16 +120,16 @@
 
       hr {
         background: #abc5c5;
-        margin-top: 0;
         margin-bottom: 11px;
-        max-width: 265px;
         margin-left: 0;
+        margin-top: 0;
+        max-width: 265px;
       }
 
       p {
-        margin: 0;
-        font-size: 15px;
         color: #619495;
+        font-size: 15px;
+        margin: 0;
         padding: 0;
       }
     }
@@ -52,13 +139,13 @@
     position: relative;
 
     &::before {
-      content: "";
       background: url("images/proc-bg.png") no-repeat center;
-      width: 411px;
+      content: "";
       height: 378px;
       position: absolute;
       right: 211px;
       top: 69px;
+      width: 411px;
 
       @include media-breakpoint-down(lg) {
         display: none;
@@ -67,29 +154,29 @@
 
     .entry {
       &-title {
-        z-index: 0;
-        margin-bottom: 59px;
         font-size: 2.5625rem;
+        margin-bottom: 59px;
         margin-top: 101px;
+        z-index: 0;
 
         &--has-bg {
           &::before {
-            top: -91px;
-            left: auto;
-            width: 190px;
             height: 194px;
+            left: auto;
             right: 80px;
+            top: -91px;
+            width: 190px;
           }
         }
       }
     }
 
     &__single {
-      position: relative;
-      max-width: 264px;
+      background-repeat: no-repeat;
       height: 372px;
       margin: auto;
-      background-repeat: no-repeat;
+      max-width: 264px;
+      position: relative;
 
       @include media-breakpoint-down(md) {
         margin-top: 10px;
@@ -97,26 +184,26 @@
     }
 
     &__title {
+      color: #fffaf8;
+      display: block;
       font-size: .9375rem;
       font-weight: bold;
-      color: #fffaf8;
+      left: 16px;
+      margin: 0;
+      position: relative;
       text-transform: uppercase;
       top: 31px;
-      left: 16px;
-      display: block;
-      position: relative;
-      margin: 0;
     }
 
     &__footer {
+      bottom: 0;
+      padding-bottom: 20px;
       padding-left: 12px;
       padding-right: 12px;
-      padding-bottom: 20px;
       position: absolute;
-      bottom: 0;
-      z-index: 1;
-      width: 100%;
       text-align: right;
+      width: 100%;
+      z-index: 1;
 
       hr {
         background: #ededed;
@@ -131,13 +218,13 @@
   }
 
   &-depo {
-    margin-top: 30px;
     margin-bottom: 103px;
+    margin-top: 30px;
 
     &__container {
+      background: url("images/dep-bg.png") no-repeat right center;
       min-height: 300px;
       padding-top: 116px;
-      background: url("images/dep-bg.png") no-repeat right center;
 
       .entry-title {
         font-size: 2.6875rem;
@@ -148,10 +235,10 @@
         background: transparent;
 
         .bx-controls-direction {
-          position: absolute;
-          right: 222px;
           bottom: 20px;
           display: none;
+          position: absolute;
+          right: 222px;
 
           @include media-breakpoint-up(md) {
             display: block;
@@ -168,8 +255,8 @@
 
           .bx-prev {
             background: url("images/left-arrow-blue.png") no-repeat;
-            right: 79px;
             left: auto;
+            right: 79px;
           }
         }
 
@@ -180,30 +267,30 @@
             margin: 0;
 
             p {
-              padding-right: 118px;
               margin-bottom: 49px;
+              padding-right: 118px;
             }
 
             &__nome {
               color: $blue;
               font-size: .9375rem;
+              left: 155px;
               max-width: 265px;
               position: relative;
-              left: 155px;
 
               hr {
-                margin: 0;
                 background: #abc5c5;
-                margin-top: 0;
+                margin: 0;
                 margin-bottom: 17px;
+                margin-top: 0;
               }
 
               h4 {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 0;
                 margin-bottom: 5px;
                 margin-top: 0;
-                font-weight: 300;
-                font-size: 15px;
-                line-height: 0;
               }
             }
           }
@@ -213,18 +300,18 @@
   }
 
   &-loca {
-    min-height: 942px;
-    margin-bottom: -214px;
-    padding-bottom: 214px;
-    padding-top: 95px;
-    margin-top: 103px;
     background: url("images/localizacao-home.png") no-repeat center;
     background-size: cover;
+    margin-bottom: -214px;
+    margin-top: 103px;
+    min-height: 942px;
+    padding-bottom: 214px;
+    padding-top: 95px;
 
     &__end {
       p {
-        font-size: .9375rem;
         color: #fffaf8;
+        font-size: .9375rem;
         margin: 0;
       }
     }
@@ -254,17 +341,17 @@
     .entry {
       &-title {
         &--has-bg {
-          font-size: 2.5625rem;
           color: #fffaf8;
-          margin-top: 111px;
+          font-size: 2.5625rem;
           margin-bottom: 29px;
+          margin-top: 111px;
 
           &::before {
-            width: 172px;
-            height: 172px;
             background-color: #619495;
-            top: -130px;
+            height: 172px;
             left: -86px;
+            top: -130px;
+            width: 172px;
           }
         }
       }
