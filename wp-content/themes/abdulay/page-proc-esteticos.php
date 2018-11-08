@@ -91,6 +91,7 @@ function tirarAcentos($string){
             <h2 class="chamada__title">
               Agende sua consulta!
             </h2>
+            <a class="chamada__title-link" href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" title="Agende sua consulta!"></a>
           </div><!-- col-md-7 -->
           <div class="col-md-4 col-lg-3  offset-md-1 chamada__info">
           <p>

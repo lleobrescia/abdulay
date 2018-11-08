@@ -20,7 +20,8 @@
 
   &-template-page-faq,
   &-template-page-contact,
-  &-template-page-booking {
+  &-template-page-booking,
+  &-template-page-about {
     background: url('images/page-bg.png') no-repeat right 131px $color__background-body;
   }
 }
@@ -38,6 +39,7 @@
 
     p {
       font-size: .9375rem;
+      font-weight: 400;
     }
   }
 }

@@ -22,10 +22,8 @@
       font-size: 1.875rem;
       font-weight: 300;
       line-height: 30px;
+      text-decoration: underline;
 
-      &:hover {
-        text-decoration: underline;
-      }
     }
 
     &__contato {
@@ -69,32 +67,32 @@
       }
 
       .fa {
+
+
+        font-size: 1.1875rem;
+        margin-bottom: 8px;
         margin-right: 7px;
 
         @include media-breakpoint-up(sm) {
           display: block;
           margin-right: 0;
         }
-
-
-        font-size: 1.1875rem;
-        margin-bottom: 8px;
       }
     }
 
     &__bottom {
       .col-lg-10 {
         border-top: solid 1px $color__background-hr;
-        padding-top: 10px;
-        padding-bottom: 10px;
         font-size: .8125rem;
+        padding-bottom: 10px;
+        padding-top: 10px;
 
         a {
           color: #fffaf8;
-          text-transform: uppercase;
           float: right;
           font-size: .6875rem;
           font-weight: bold;
+          text-transform: uppercase;
         }
       }
     }

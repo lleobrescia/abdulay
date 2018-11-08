@@ -129,7 +129,7 @@
 }
 
 @font-face {
-  font-family: 'texta-heavyituploaded_file';
+  font-family: 'texta';
   src: url('texta_heavy_italic-webfont.woff2') format('woff2'),
        url('texta_heavy_italic-webfont.woff') format('woff');
   font-weight: 900;
@@ -138,7 +138,7 @@
 }
 
 @font-face {
-  font-family: 'texta-heavyuploaded_file';
+  font-family: 'texta';
   src: url('texta_heavy-webfont.woff2') format('woff2'),
        url('texta_heavy-webfont.woff') format('woff');
   font-weight: 900;
@@ -147,7 +147,7 @@
 }
 
 @font-face {
-  font-family: 'texta-ituploaded_file';
+  font-family: 'texta';
   src: url('texta_italic-webfont.woff2') format('woff2'),
        url('texta_italic-webfont.woff') format('woff');
   font-weight: normal;
@@ -156,7 +156,7 @@
 }
 
 @font-face {
-  font-family: 'texta-lightituploaded_file';
+  font-family: 'texta';
   src: url('texta_light_italic-webfont.woff2') format('woff2'),
        url('texta_light_italic-webfont.woff') format('woff');
   font-weight: 300;
@@ -165,7 +165,7 @@
 }
 
 @font-face {
-  font-family: 'texta-lightuploaded_file';
+  font-family: 'texta';
   src: url('texta_light-webfont.woff2') format('woff2'),
        url('texta_light-webfont.woff') format('woff');
   font-weight: 300;
@@ -174,7 +174,7 @@
 }
 
 @font-face {
-  font-family: 'texta-mediumuploaded_file';
+  font-family: 'texta';
   src: url('texta_medium-webfont.woff2') format('woff2'),
        url('texta_medium-webfont.woff') format('woff');
   font-weight: 500;
@@ -183,7 +183,7 @@
 }
 
 @font-face {
-  font-family: 'texta-regularuploaded_file';
+  font-family: 'texta';
   src: url('texta_regular-webfont.woff2') format('woff2'),
        url('texta_regular-webfont.woff') format('woff');
   font-weight: normal;

@@ -82,9 +82,9 @@ $end         = get_field('endereço', 'option');
         </div><!-- row -->
       </div><!-- container -->
 
-      <div class="contact__image">
-        <img src="<?= get_template_directory_uri() ?>/images/mapa.png" alt="Mapa da Localização">
-      </div><!-- contact__image -->
+      <div class="contact__map">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.084699137286!2d-43.219469585633064!3d-22.983912684972587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd5abe396f74d%3A0x1c374d6b338a6024!2sAv.+Ataulfo+de+Paiva%2C+135+-+Leblon%2C+Rio+de+Janeiro+-+RJ%2C+22440-033!5e0!3m2!1spt-BR!2sbr!4v1541639913133" width="1412" height="720" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div><!-- contact__map -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

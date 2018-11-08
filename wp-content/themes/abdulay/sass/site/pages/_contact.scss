@@ -37,7 +37,9 @@
 
     .btn-outline-primary {
       float: right;
+      font-size: .9375rem;
       margin-top: 8px;
+      text-transform: uppercase;
     }
   }
 
@@ -46,11 +48,14 @@
 
     &__title-box {
       background: $blue;
+      margin-bottom: -233px;
       max-width: 326px;
       padding-bottom: 30px;
       padding-left: 46px;
       padding-right: 24px;
       padding-top: 21px;
+      position: relative;
+      z-index: 1;
 
       p {
         color: #fffaf8;
@@ -89,17 +94,24 @@
     }
   }
 
-  &__image {
-    @include media-breakpoint-up(sm) {
-      margin-top: -234px;
-    }
+  &__map {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
 
-    @include media-breakpoint-up(lg) {
-      margin-bottom: -214px;
-    }
-
-    img {
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
       width: 100%;
     }
+  }
+}
+
+.page-template-page-contact {
+  .site-footer {
+    display: none;
   }
 }

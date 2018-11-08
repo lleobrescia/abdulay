@@ -35,6 +35,9 @@ textarea {
   &.form-control {
     border: 1px solid $color__border-input;
     max-height: 142px;
+    color: #626462;
+    padding: 3px 22px;
+    font-size: .9375rem;
   }
 }
 

@@ -69,10 +69,10 @@
 
     a {
       color: #626462;
+      display: block;
       font-size: .9375rem;
       position: relative;
       z-index: 2;
-      display: block;
     }
 
     h4 {
@@ -102,6 +102,16 @@
   .chamada {
     margin-top: 53px;
 
+    &__title-link {
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+
     &__title {
       background: url("images/bg_title.png") no-repeat center;
       color: #fffaf8;
@@ -114,7 +124,7 @@
     }
 
     &__info {
-      padding-top: 83px;
+      padding-top: 55px;
 
       .chamada__button {
         border-radius: 0;

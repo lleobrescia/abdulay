@@ -93,7 +93,7 @@
           top: 0;
           transition: visibility 0s, opacity 0.2s linear;
           visibility: hidden;
-          z-index: 1;
+          z-index: 9;
 
           @include media-breakpoint-down(sm) {
             border: none;
@@ -110,6 +110,7 @@
 
           .dropdown-item {
             color: $blue;
+            background: #fffdfc;
 
             &:hover {
               background-color: #f2f1ef;
