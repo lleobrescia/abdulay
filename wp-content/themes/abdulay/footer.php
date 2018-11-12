@@ -18,6 +18,7 @@ $linkedin    = get_field('link_do_linkedin', 'option');
 $whatsapp    = get_field('link_whatsapp', 'option');
 $email       = get_field('e-mail', 'option');
 $end         = get_field('endereço', 'option');
+$lattes      = get_field('lattes', 'option');
 ?>
 
 	</div><!-- #content -->
@@ -55,21 +56,24 @@ $end         = get_field('endereço', 'option');
               <br class="d-block d-md-none">
               <div class="footer__social-single">
                 <a href="<?= $facebook; ?>" title="Abdulay Eziquiel Facebook" rel="external" target="_blank">
-                  <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                  <img src="<?= get_template_directory_uri(); ?>/images/icon-face.png" alt="">
                 </a>
                 <a href="<?= $instagram; ?>" title="Abdulay Eziquiel Instagram" rel="external" target="_blank">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <img src="<?= get_template_directory_uri(); ?>/images/icon-instagram.png" alt="">
                 </a>
                 <a href="<?= $whatsapp; ?>" title="Abdulay Eziquiel Whatsapp" rel="external" target="_blank">
-                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                  <img src="<?= get_template_directory_uri(); ?>/images/icon-wathsapp.png" alt="">
                 </a>
               </div>
               <div class="footer__social-single">
                 <a href="<?= $twitter; ?>" title="Abdulay Eziquiel Twitter" rel="external" target="_blank">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <img src="<?= get_template_directory_uri(); ?>/images/icon-twitter.png" alt="">
+                </a>
+                <a href="<?= $lattes; ?>" title="Abdulay Eziquiel Twitter" rel="external" target="_blank">
+                  <img src="<?= get_template_directory_uri(); ?>/images/icon-lattes.png" alt="">
                 </a>
                 <a href="<?= $linkedin; ?>" title="Abdulay Eziquiel LinkedIn" rel="external" target="_blank">
-                  <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                  <img src="<?= get_template_directory_uri(); ?>/images/icon-linkedin.png" alt="">
                 </a>
               </div>
             </section><!-- footer__social -->

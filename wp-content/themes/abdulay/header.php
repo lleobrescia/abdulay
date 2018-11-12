@@ -48,13 +48,19 @@
         <p><span>|</span>  <?= $email; ?></p>
         <div class="social-top">
           <a class="social-top__link" href="<?= $instagram; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Instagram">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <img src="<?= get_template_directory_uri(); ?>/images/icon-instagram.png" alt=""
+            onmouseover="this.src='<?= get_template_directory_uri(); ?>/images/icon-instagram-hover.png'"
+            onmouseout="this.src='<?= get_template_directory_uri(); ?>/images/icon-instagram.png'">
           </a>
           <a class="social-top__link" href="<?= $facebook; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Facebook">
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <img src="<?= get_template_directory_uri(); ?>/images/icon-face.png" alt=""
+            onmouseover="this.src='<?= get_template_directory_uri(); ?>/images/icon-face_hover.png'"
+            onmouseout="this.src='<?= get_template_directory_uri(); ?>/images/icon-face.png'">
           </a>
           <a class="social-top__link" href="<?= $whatsapp; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Whatsapp">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <img src="<?= get_template_directory_uri(); ?>/images/icon-wathsapp.png" alt=""
+            onmouseover="this.src='<?= get_template_directory_uri(); ?>/images/icon-whatsapp_hover.png'"
+            onmouseout="this.src='<?= get_template_directory_uri(); ?>/images/icon-wathsapp.png'">
           </a>
         </div><!-- social-top -->
       </div><!-- container-fluid -->

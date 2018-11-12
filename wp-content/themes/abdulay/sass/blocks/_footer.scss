@@ -59,22 +59,10 @@
         a {
           color: #fffaf8;
           text-decoration: none;
+          display: block;
         }
 
         &:last-child {
-          margin-right: 0;
-        }
-      }
-
-      .fa {
-
-
-        font-size: 1.1875rem;
-        margin-bottom: 8px;
-        margin-right: 7px;
-
-        @include media-breakpoint-up(sm) {
-          display: block;
           margin-right: 0;
         }
       }

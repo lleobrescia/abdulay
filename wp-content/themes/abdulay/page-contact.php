@@ -44,13 +44,13 @@ $end         = get_field('endereço', 'option');
                     <?= $email; ?> <br>
                     <div class="contact-info__social">
                       <a href="<?= $facebook; ?>" title="Abdulay Eziquiel Facebook" rel="external" target="_blank">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <img src="<?= get_template_directory_uri(); ?>/images/icon-face_hover.png" alt="">
                       </a>
                       <a href="<?= $instagram; ?>" title="Abdulay Eziquiel Instagram" rel="external" target="_blank">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <img src="<?= get_template_directory_uri(); ?>/images/icon-instagram-hover.png" alt="">
                       </a>
                       <a href="<?= $whatsapp; ?>" title="Abdulay Eziquiel Whatsapp" rel="external" target="_blank">
-                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                        <img src="<?= get_template_directory_uri(); ?>/images/icon-whatsapp_hover.png" alt="">
                       </a>
                     </div><!-- contact-info__social -->
                   </div><!-- contact-info -->
