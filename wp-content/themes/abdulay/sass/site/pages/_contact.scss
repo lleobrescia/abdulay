@@ -33,6 +33,7 @@
     @include media-breakpoint-up(md) {
       float: right;
       max-width: 400px;
+      width: 100%;
     }
 
     .btn-outline-primary {
@@ -91,21 +92,6 @@
         line-height: 15px;
         margin-bottom: 0;
       }
-    }
-  }
-
-  &__map {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-
-    iframe {
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
     }
   }
 }

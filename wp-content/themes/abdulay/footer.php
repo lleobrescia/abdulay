@@ -29,7 +29,7 @@ $lattes      = get_field('lattes', 'option');
         <section class="col-lg-10 footer offset-lg-1">
           <dir class="row row--footer">
             <section class="col-sm-4 col-lg-3 offset-lg-1 p-0">
-              <a href="" class="footer__chamada">
+              <a href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" class="footer__chamada">
                 Agende sua <br>
                 consulta aqui &gt;
               </a>
