@@ -27,7 +27,7 @@ get_header();
             while ( have_rows('slide') ) : the_row();
         ?>
         <li>
-        <div class="home-slider__text">
+          <div class="home-slider__text">
             <div>
               <h2 class="entry-title"><?php the_sub_field('titulo'); ?></h2>
               <hr>

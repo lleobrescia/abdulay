@@ -2,6 +2,16 @@
   background: url("images/home-bg.png") no-repeat left center;
 
   &-slider {
+
+    @media (min-width: 1400px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1230px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+    }
+
     .entry-title {
       font-size: 2.5625rem;
       font-weight: 400;
@@ -11,6 +21,9 @@
 
     img {
       display: initial;
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
     }
 
     &__container {
@@ -28,10 +41,10 @@
       }
 
       .bx-controls-direction {
-        width: 75px;
+        bottom: 83px;
         position: absolute;
         right: 627px;
-        bottom: 83px;
+        width: 75px;
       }
 
       .bx-next {
@@ -52,19 +65,20 @@
       position: absolute;
       top: 0;
 
-      @include media-breakpoint-up(md) {
-        right: 617px;
+      @include media-breakpoint-up(lg) {
+        right: 656px;
       }
 
       &::before {
-        content: "";
-        width: 381px;
-        height: 401px;
         background: url('images/bg-title.png') no-repeat center;
-        position: absolute;
+        content: "";
+        height: 401px;
         left: -50px;
+        position: absolute;
+        width: 381px;
+        z-index: 1;
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(md) {
           display: none;
         }
       }
@@ -76,15 +90,15 @@
 
       hr {
         margin-bottom: 15px;
+        margin-left: 0;
         margin-top: 10px;
         max-width: 400px;
-        margin-left: 0;
       }
 
       p {
-        max-width: 400px;
-        font-size: 15px;
         color: #626462;
+        font-size: 15px;
+        max-width: 400px;
       }
     }
   }
