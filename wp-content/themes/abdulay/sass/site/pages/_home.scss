@@ -2,6 +2,14 @@
   background: url("images/home-bg.png") no-repeat left center;
 
   &-slider {
+    @include media-breakpoint-down(md) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1230px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+    }
 
     @media (min-width: 1400px) {
       margin-left: auto;
@@ -24,6 +32,10 @@
       max-width: 850px;
       position: relative;
       z-index: 2;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
     }
 
     &__container {
@@ -79,7 +91,7 @@
         z-index: 1;
 
         @include media-breakpoint-down(md) {
-          display: none;
+          z-index: 3;
         }
       }
 
@@ -109,8 +121,11 @@
     .entry-title {
       font-size: 43px;
       margin-bottom: 17px;
-      margin-top: 155px;
       padding-left: 105px;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 155px;
+      }
     }
 
     &__text {
@@ -154,8 +169,8 @@
       content: "";
       height: 378px;
       position: absolute;
-      right: 211px;
-      top: 69px;
+      right: 0;
+      top: 163px;
       width: 411px;
 
       @include media-breakpoint-down(lg) {
