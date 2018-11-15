@@ -78,7 +78,16 @@ if ( ! function_exists( 'abdulay_setup' ) ) :
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
-		) );
+    ) );
+
+    update_option( 'thumbnail_size_w', 600 );
+    update_option( 'thumbnail_size_h', 600 );
+
+    update_option( 'medium_size_w', 800 );
+    update_option( 'medium_size_h', 800 );
+
+    update_option( 'large_size_w', 1000 );
+    update_option( 'large_size_h', 1000 );
 	}
 endif;
 add_action( 'after_setup_theme', 'abdulay_setup' );
@@ -133,7 +142,6 @@ function abdulay_scripts() {
 
   wp_enqueue_style( 'bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
 
-
   wp_enqueue_style( 'abdulay-style', get_stylesheet_uri(), array('abdulay-fonts', 'font-awesome', 'bxslider')  );
 
   wp_enqueue_script( 'abdulay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -147,9 +155,6 @@ function abdulay_scripts() {
 
 	wp_enqueue_script( 'abdulay-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'abdulay_scripts' );
 
@@ -157,11 +162,6 @@ add_action( 'wp_enqueue_scripts', 'abdulay_scripts' );
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.

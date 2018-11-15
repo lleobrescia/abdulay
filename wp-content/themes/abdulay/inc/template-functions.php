@@ -35,3 +35,8 @@ function abdulay_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'abdulay_pingback_header' );
+
+function abdulay_theme_setup() {
+  add_image_size( 'extra_large', 1230, 1230, true );
+}
+add_action( 'after_setup_theme', 'abdulay_theme_setup' );
