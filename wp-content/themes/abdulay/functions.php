@@ -78,7 +78,16 @@ if ( ! function_exists( 'abdulay_setup' ) ) :
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
-		) );
+    ) );
+
+    update_option( 'thumbnail_size_w', 600 );
+    update_option( 'thumbnail_size_h', 600 );
+
+    update_option( 'medium_size_w', 800 );
+    update_option( 'medium_size_h', 800 );
+
+    update_option( 'large_size_w', 1000 );
+    update_option( 'large_size_h', 1000 );
 	}
 endif;
 add_action( 'after_setup_theme', 'abdulay_setup' );
@@ -99,36 +108,53 @@ function abdulay_content_width() {
 add_action( 'after_setup_theme', 'abdulay_content_width', 0 );
 
 /**
- * Register widget area.
+ * Remove menu item from admin dashboard
  *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ * https://codex.wordpress.org/Function_Reference/remove_menu_page
  */
-function abdulay_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'abdulay' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'abdulay' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+function abdulay_menu_page_removing() {
+  remove_menu_page( 'edit.php' );                   //Posts
+  remove_menu_page( 'edit-comments.php' );          //Comments
 }
-add_action( 'widgets_init', 'abdulay_widgets_init' );
+add_action( 'admin_menu', 'abdulay_menu_page_removing' );
+
+/**
+ * Remove permalinks
+ */
+function abdulay_hide_permalinks($return, $post_id, $new_title, $new_slug, $post)
+{
+    if($post->post_type == 'faq'
+    || $post->post_type == 'procedimento') {
+        return '';
+    }
+    return $return;
+}
+
+add_filter('get_sample_permalink_html', 'abdulay_hide_permalinks', 10, 5);
 
 /**
  * Enqueue scripts and styles.
  */
 function abdulay_scripts() {
-	wp_enqueue_style( 'abdulay-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'abdulay-fonts', get_template_directory_uri() . '/fonts/stylesheet.css');
 
-	wp_enqueue_script( 'abdulay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+  wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+  wp_enqueue_style( 'bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
+
+  wp_enqueue_style( 'abdulay-style', get_stylesheet_uri(), array('abdulay-fonts', 'font-awesome', 'bxslider')  );
+
+  wp_enqueue_script( 'abdulay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+  wp_enqueue_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array('jquery'), '20151215', true );
+
+  wp_enqueue_script( 'bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js', array('jquery'), '20151215', true );
+
+  wp_enqueue_script( 'bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js', array('jquery'), '20151215', true );
+
 
 	wp_enqueue_script( 'abdulay-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'abdulay_scripts' );
 
@@ -136,11 +162,6 @@ add_action( 'wp_enqueue_scripts', 'abdulay_scripts' );
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
@@ -160,8 +181,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Load WooCommerce compatibility file.
+ * Custom admin menu.
  */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
+require get_template_directory() . '/inc/options-page.php';
+
+/**
+ * Custom post FAQ
+ */
+require get_template_directory() . '/inc/faq-post-type.php';
+
+/**
+ * Custom post Procedimentos
+ */
+require get_template_directory() . '/inc/procedimento-post-type.php';
+

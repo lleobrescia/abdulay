@@ -1,0 +1,192 @@
+/* GT SUPER */
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-bold-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-bolditalic-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-bolditalic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-light-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-lightitalic-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-lightitalic-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-medium-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-mediumitalic-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-mediumitalic-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-regular-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'gt_super_displayitalic';
+  src: url('gtsuperdisplay-regularitalic-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-regularitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-super-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-super-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'gt super';
+  src: url('gtsuperdisplay-superitalic-webfont.woff2') format('woff2'),
+    url('gtsuperdisplay-superitalic-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+
+}
+
+/* TEXTA */
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_black_italic-webfont.woff2') format('woff2'),
+       url('texta_black_italic-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_black-webfont.woff2') format('woff2'),
+       url('texta_black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_bold_italic-webfont.woff2') format('woff2'),
+       url('texta_bold_italic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_bold-webfont.woff2') format('woff2'),
+       url('texta_bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_heavy_italic-webfont.woff2') format('woff2'),
+       url('texta_heavy_italic-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_heavy-webfont.woff2') format('woff2'),
+       url('texta_heavy-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_italic-webfont.woff2') format('woff2'),
+       url('texta_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_light_italic-webfont.woff2') format('woff2'),
+       url('texta_light_italic-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_light-webfont.woff2') format('woff2'),
+       url('texta_light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_medium-webfont.woff2') format('woff2'),
+       url('texta_medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'texta';
+  src: url('texta_regular-webfont.woff2') format('woff2'),
+       url('texta_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

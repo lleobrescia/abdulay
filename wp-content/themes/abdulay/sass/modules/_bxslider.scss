@@ -1,0 +1,29 @@
+.bx-wrapper {
+  border: none;
+  box-shadow: none;
+
+  .bx-prev {
+    background: url('images/left-arrow.png') no-repeat;
+  }
+
+  .bx-next {
+    background: url('images/right-arrow.png') no-repeat;
+
+    &:hover,
+    &:focus {
+      background-position: 0 0;
+    }
+  }
+
+  .bx-viewport {
+    .bxslider {
+      li {
+        img {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

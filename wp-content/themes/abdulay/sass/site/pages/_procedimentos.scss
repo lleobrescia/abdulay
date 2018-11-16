@@ -1,0 +1,191 @@
+.proc {
+  &__select {
+    select {
+      border-left: none;
+      border-right: none;
+      color: $blue;
+      font-size: .9375rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    color: $color__text-main;
+
+    p {
+      margin-bottom: 26px;
+    }
+
+    a {
+      color: $blue;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $blue;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+  }
+
+  .see-more {
+    min-height: 215px;
+    padding-right: 30px;
+    padding-top: 61px;
+    position: relative;
+    text-align: right;
+
+    &::before {
+      background: #f2f1ef;
+      content: "";
+      display: block;
+      height: 215px;
+      position: absolute;
+      right: 182px;
+      top: 0;
+      width: 222px;
+      z-index: 0;
+    }
+
+    &::after {
+      background: #619495;
+      bottom: 31px;
+      content: "";
+      display: block;
+      height: 12px;
+      left: 150px;
+      position: absolute;
+      width: 165px;
+      z-index: 1;
+    }
+
+    a {
+      color: #626462;
+      display: block;
+      font-size: .9375rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    h4 {
+      color: $blue;
+      font-family: $font__sec;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      margin-top: 45px;
+      margin-top: 0;
+      padding-right: 121px;
+      position: relative;
+
+      &::before {
+        background: #abc5c5;
+        content: "";
+        display: block;
+        height: 1px;
+        max-width: 220px;
+        position: absolute;
+        right: 257px;
+        top: 16px;
+        width: 100%;
+      }
+    }
+  }
+
+  .chamada {
+    margin-top: 53px;
+
+    &__title-link {
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    &__title {
+      background: url("images/bg_title.png") no-repeat center;
+      color: #fffaf8;
+      font-family: $font__sec;
+      font-size: 3rem;
+      height: 207px;
+      padding-right: 110px;
+      padding-top: 77px;
+      text-align: right;
+    }
+
+    &__info {
+      padding-top: 55px;
+
+      .chamada__button {
+        border-radius: 0;
+        color: #626462;
+        font-size: .8125rem;
+        text-transform: uppercase;
+
+        &:hover {
+          color: white !important;
+        }
+      }
+
+      p {
+        color: #626462;
+        font-size: .9375rem;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .citacao {
+    background: url("images/aspas.png") no-repeat left top;
+    margin-top: 100px;
+    padding-top: 205px;
+    text-align: right;
+
+    &__title {
+      color: #619495;
+      font-family: $font__sec;
+      font-size: 2.25rem;
+      margin-bottom: 27px;
+      margin-top: 0;
+      padding-bottom: 17px;
+      position: relative;
+
+      &::before {
+        background: #a3c0c0;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 539px;
+      }
+    }
+
+    &__text {
+      color: #626462;
+      font-size: 1.125rem;
+      font-style: italic;
+      line-height: 20px;
+      padding-right: 86px;
+    }
+
+    &__photo {
+      display: block;
+
+      @include media-breakpoint-up(md) {
+        margin-left: -91px;
+      }
+    }
+  }
+}

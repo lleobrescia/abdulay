@@ -1,0 +1,462 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Project-Id-Version: Dra. Abdulay Eziquiel\n"
+"POT-Creation-Date: 2018-11-15 22:14-0200\n"
+"PO-Revision-Date: 2018-11-15 22:14-0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Leo Brescia <leonardo@leobrescia.com.br>\n"
+"Language: pt_BR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:18
+msgid "Opa! Essa página não pode ser encontrada."
+msgstr ""
+
+#: 404.php:22
+msgid "Parece que nada foi encontrado neste local."
+msgstr ""
+
+#: dist/abdulay/404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: dist/abdulay/404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: dist/abdulay/404.php:25
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: dist/abdulay/404.php:41
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: dist/abdulay/functions.php:47 functions.php:47
+msgid "Primary"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:12 inc/faq-post-type.php:12
+msgctxt "post type general name"
+msgid "FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:13 inc/faq-post-type.php:13
+msgctxt "post type singular name"
+msgid "FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:14 inc/faq-post-type.php:14
+msgctxt "admin menu"
+msgid "FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:15 inc/faq-post-type.php:15
+msgctxt "add new on admin bar"
+msgid "FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:16 inc/faq-post-type.php:16
+msgctxt "item"
+msgid "Adicionar FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:17 inc/faq-post-type.php:17
+msgid "Adicionar FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:18
+#: dist/abdulay/inc/procedimento-post-type.php:18 inc/faq-post-type.php:18
+#: inc/procedimento-post-type.php:18
+msgid "Novo"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:19
+#: dist/abdulay/inc/procedimento-post-type.php:19 inc/faq-post-type.php:19
+#: inc/procedimento-post-type.php:19
+msgid "Salvar"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:20 inc/faq-post-type.php:20
+msgid "Editar FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:21 inc/faq-post-type.php:21
+msgid "Ver FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:22 inc/faq-post-type.php:22
+msgid "Todos FAQs"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:23 inc/faq-post-type.php:23
+msgid "Procurar FAQ"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:24
+#: dist/abdulay/inc/procedimento-post-type.php:24 inc/faq-post-type.php:24
+#: inc/procedimento-post-type.php:24
+msgid "Parent Itens:"
+msgstr ""
+
+#: dist/abdulay/inc/faq-post-type.php:25 dist/abdulay/inc/faq-post-type.php:26
+#: inc/faq-post-type.php:25 inc/faq-post-type.php:26
+msgid "FAQ não encontrado."
+msgstr ""
+
+#: dist/abdulay/inc/options-page.php:17 dist/abdulay/inc/options-page.php:18
+#: inc/options-page.php:17
+msgid "Informações do Site"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:12
+#: inc/procedimento-post-type.php:12
+msgctxt "post type general name"
+msgid "Procedimento"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:13
+#: inc/procedimento-post-type.php:13
+msgctxt "post type singular name"
+msgid "Procedimento"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:14
+#: inc/procedimento-post-type.php:14
+msgctxt "admin menu"
+msgid "Procedimentos"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:15
+#: inc/procedimento-post-type.php:15
+msgctxt "add new on admin bar"
+msgid "Procedimento"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:16
+#: inc/procedimento-post-type.php:16
+msgctxt "item"
+msgid "Adicionar Procedimento"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:17
+#: inc/procedimento-post-type.php:17
+msgid "Adicionar Procedimento"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:20
+#: inc/procedimento-post-type.php:20
+msgid "Editar Procedimento"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:21
+#: inc/procedimento-post-type.php:21
+msgid "Ver Procedimento"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:22
+#: inc/procedimento-post-type.php:22
+msgid "Todos Procedimentos"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:23
+#: inc/procedimento-post-type.php:23
+msgid "Procurar Procedimento"
+msgstr ""
+
+#: dist/abdulay/inc/procedimento-post-type.php:25
+#: dist/abdulay/inc/procedimento-post-type.php:26
+#: inc/procedimento-post-type.php:25 inc/procedimento-post-type.php:26
+msgid "Procedimento não encontrado."
+msgstr ""
+
+#: dist/abdulay/template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: dist/abdulay/template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: dist/abdulay/template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: dist/abdulay/template-parts/content-none.php:43
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: dist/abdulay/template-parts/content-page.php:24
+#: dist/abdulay/template-parts/content.php:50
+#: template-parts/content-page.php:24
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: dist/abdulay/template-parts/content-page.php:37
+#: template-parts/content-page.php:37
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: dist/abdulay/template-parts/content.php:39
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: footer.php:33
+msgid ""
+"Agende sua <br>\n"
+"                consulta aqui &gt;"
+msgstr ""
+
+#: footer.php:41
+msgid "contato e atendimento"
+msgstr ""
+
+#: front-page.php:61 page-about.php:27
+msgid "Sobre mim"
+msgstr ""
+
+#: front-page.php:69
+msgid ""
+"Cirurgiã Plástica Estética e Reparadora <br> Membro da Sociedade Brasileira "
+"de Cirugia Plástica"
+msgstr ""
+
+#: front-page.php:84
+msgid "Conheça os nossos <br> procedimentos"
+msgstr ""
+
+#: front-page.php:100
+msgid "ROSTO"
+msgstr ""
+
+#: front-page.php:106 front-page.php:117 front-page.php:128 front-page.php:139
+msgid "Saiba mais &gt;"
+msgstr ""
+
+#: front-page.php:113
+msgid "CORPO"
+msgstr ""
+
+#: front-page.php:124
+msgid "MAMA"
+msgstr ""
+
+#: front-page.php:135
+msgid "ESTÉTICOS"
+msgstr ""
+
+#: front-page.php:156
+msgid "Depoimentos"
+msgstr ""
+
+#: front-page.php:198
+msgid "Localização e <br> atendimento"
+msgstr ""
+
+#: front-page.php:208 page-contact.php:77
+msgid "Rio de Janeiro"
+msgstr ""
+
+#: header.php:89
+msgid "Procedimentos"
+msgstr ""
+
+#: header.php:96
+msgid "Face"
+msgstr ""
+
+#: header.php:99
+msgid "Corpo"
+msgstr ""
+
+#: header.php:102
+msgid "Mama"
+msgstr ""
+
+#: header.php:105
+msgid "Estéticos"
+msgstr ""
+
+#: header.php:112
+msgid "Perguntas Frequentes"
+msgstr ""
+
+#: header.php:120
+msgid "Sobre"
+msgstr ""
+
+#: header.php:129
+msgid "Blog"
+msgstr ""
+
+#: header.php:138
+msgid "Contato"
+msgstr ""
+
+#: header.php:147
+msgid "Agende sua Consulta"
+msgstr ""
+
+#: inc/options-page.php:18
+msgid "Informações<br> do Site"
+msgstr ""
+
+#: page-about.php:64
+msgid "O Consultório"
+msgstr ""
+
+#: page-booking.php:27
+msgid "Agende sua <br> Consulta"
+msgstr ""
+
+#: page-contact.php:38
+msgid "Dúvidas? <br> Entre em contato!"
+msgstr ""
+
+#: page-contact.php:74
+msgid "Nossa <br> localização"
+msgstr ""
+
+#: page-faq.php:28
+msgid "Perguntas <br> Frequentes"
+msgstr ""
+
+#: page-proc-corpo.php:34
+msgid "Procedimentos <br> para o corpo"
+msgstr ""
+
+#: page-proc-corpo.php:81 page-proc-esteticos.php:80 page-proc-mama.php:80
+#: page-proc-rosto.php:80
+msgid "veja também"
+msgstr ""
+
+#: page-proc-corpo.php:82 page-proc-esteticos.php:81 page-proc-mama.php:81
+msgid "Procedimentos para o rosto &gt;"
+msgstr ""
+
+#: page-proc-corpo.php:83 page-proc-esteticos.php:83 page-proc-rosto.php:82
+msgid "Procedimentos para a mama &gt;"
+msgstr ""
+
+#: page-proc-corpo.php:84 page-proc-mama.php:83 page-proc-rosto.php:83
+msgid "Procedimentos estéticos &gt;"
+msgstr ""
+
+#: page-proc-corpo.php:92 page-proc-corpo.php:95 page-proc-esteticos.php:92
+#: page-proc-esteticos.php:95 page-proc-mama.php:91 page-proc-mama.php:94
+#: page-proc-rosto.php:91 page-proc-rosto.php:94
+msgid "Agende sua consulta!"
+msgstr ""
+
+#: page-proc-corpo.php:99 page-proc-esteticos.php:99 page-proc-mama.php:98
+#: page-proc-rosto.php:98
+msgid "Decidiu por algum procedimento ou ainda está em dúvida?"
+msgstr ""
+
+#: page-proc-corpo.php:104 page-proc-esteticos.php:104 page-proc-mama.php:103
+#: page-proc-rosto.php:103
+msgid "Conheça nosso espaço e converse comigo para obter mais informações!"
+msgstr ""
+
+#: page-proc-corpo.php:108 page-proc-esteticos.php:108 page-proc-mama.php:107
+#: page-proc-rosto.php:107
+msgid "clique aqui para agendar uma data"
+msgstr ""
+
+#: page-proc-esteticos.php:34
+msgid "Procedimentos <br> estéticos"
+msgstr ""
+
+#: page-proc-esteticos.php:82 page-proc-mama.php:82 page-proc-rosto.php:81
+msgid "Procedimentos para o corpo &gt;"
+msgstr ""
+
+#: page-proc-mama.php:34
+msgid "Procedimentos <br> para a mama"
+msgstr ""
+
+#: page-proc-rosto.php:34
+msgid "Procedimentos <br> para o rosto"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Dra. Abdulay Eziquiel"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://draabdulay.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This theme was developed especially for Dra. Abdulay Eziquiel, in "
+"partnership with Casa2 Design (https://sitedacasa.com/)"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Leo Brescia <leonardo@leobrescia.com.br>"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://leobrescia.com.br/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "About"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Booking"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Contact"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "FAQ"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Procedimento Corpo"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Procedimento Estéticos"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Procedimento Mama"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Procedimento Rosto"
+msgstr ""

@@ -1,27 +1,39 @@
-=== abdulay ===
+# Dra. Abdulay Eziquiel - A Wordpress Theme
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
-Requires at least: 4.5
-Tested up to: 4.8
-Stable tag: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+**Programming by**: Leo Brescia <leonardo@leobrescia.com.br>
+**Design by**: Casa2 Design (https://sitedacasa.com/)
+**Theme URI**: http://draabdulay.com/
+**Requires at least**: WordPress 4.7
+**Tested up to**: WordPress 4.9
+**Version**: 1.1
+**License**: GPLv2 or later
+**License URI**: http://www.gnu.org/licenses/gpl-2.0.html
 
-Description
+## Description
+This theme was developed especially for Dra. Abdulay Eziquiel, in partnership with Casa2 Design (https://sitedacasa.com/).
 
-== Description ==
+Dra. Abdulay Eziquiel is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-Long description here
+### Plugins
+- Advanced Custom Fields PRO
+- Contact Form 7
+- Radio Buttons for Taxonomies
+- Team Booking
 
-== Installation ==
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+## Changelog
+- This project adheres to [Semantic Versioning](http://semver.org/) for named your versions.
 
-== Credits ==
+#### Convensions
 
-* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+- `Added` for new features.
+- `Changed` for changes in existing functionality.
+- `Deprecated` for once-stable features removed in upcoming releases.
+- `Removed` for deprecated features removed in this release.
+- `Fixed` for any bug fixes.
+- `Security` to invite users to upgrade in case of vulnerabilities.
+
+### 1.1.0
+* Released: November 15, 2018

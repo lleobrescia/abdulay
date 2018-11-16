@@ -11,7 +11,14 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" <?php language_attributes(); ?> >
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" <?php language_attributes(); ?> >
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html class="no-js"  <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,39 +27,134 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> ng-app="app">
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'abdulay' ); ?></a>
-
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$abdulay_description = get_bloginfo( 'description', 'display' );
-			if ( $abdulay_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $abdulay_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+    <?php
+      $tel_fixo = get_field('telefone_fixo', 'option');
+      $tel_celular = get_field('telefone_celular', 'option');
+      $instagram = get_field('instagram', 'option');
+      $facebook = get_field('facebook', 'option');
+      $whatsapp = get_field('link_whatsapp', 'option');
+      $email = get_field('e-mail', 'option');
+    ?>
+    <div class="site-header__top">
+      <div class="container">
+        <p><?= $tel_fixo; ?></p>
+          <p>
+            <span>|</span>  <?= $tel_celular; ?>
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </p>
+        <p><span>|</span>  <?= $email; ?></p>
+        <div class="social-top">
+          <a class="social-top__link" href="<?= $instagram; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Instagram">
+            <img src="<?= get_template_directory_uri(); ?>/images/icon-instagram.png" alt=""
+            onmouseover="this.src='<?= get_template_directory_uri(); ?>/images/icon-instagram-hover.png'"
+            onmouseout="this.src='<?= get_template_directory_uri(); ?>/images/icon-instagram.png'">
+          </a>
+          <a class="social-top__link" href="<?= $facebook; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Facebook">
+            <img src="<?= get_template_directory_uri(); ?>/images/icon-face.png" alt=""
+            onmouseover="this.src='<?= get_template_directory_uri(); ?>/images/icon-face_hover.png'"
+            onmouseout="this.src='<?= get_template_directory_uri(); ?>/images/icon-face.png'">
+          </a>
+          <a class="social-top__link" href="<?= $whatsapp; ?>" target="_blank" rel="external" title="Abdulay Eziquiel Whatsapp">
+            <img src="<?= get_template_directory_uri(); ?>/images/icon-wathsapp.png" alt=""
+            onmouseover="this.src='<?= get_template_directory_uri(); ?>/images/icon-whatsapp_hover.png'"
+            onmouseout="this.src='<?= get_template_directory_uri(); ?>/images/icon-wathsapp.png'">
+          </a>
+        </div><!-- social-top -->
+      </div><!-- container-fluid -->
+    </div><!-- site-header__top -->
+    <nav id="site-navigation" class="navbar-abdulay navbar navbar-expand-md ">
+      <?php
+        $custom_logo_id = get_theme_mod('custom_logo');
+        $logo = wp_get_attachment_image($custom_logo_id, 'full');
+      ?>
+      <div class="container ">
+        <a class="navbar-brand" href="<?=  home_url(); ?>" rel="home" title="<?= get_bloginfo('name'); ?>">
+          <?= $logo; ?>
+        </a>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'abdulay' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown dropdown--hover">
+              <a class="nav-link" href="#" >
+                <span>
+                <?= __('Procedimentos', 'abdulay'); ?>
+
+                <div class="underline"></div>
+                </span>
+              </a>
+              <div class="dropdown-menu dropdown-menu--hover" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-rosto/'); ?>">
+                <?= __('Face', 'abdulay'); ?>
+                </a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>">
+                <?= __('Corpo', 'abdulay'); ?>
+                </a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>">
+                 <?= __('Mama', 'abdulay'); ?>
+                </a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>">
+                <?= __('Estéticos', 'abdulay'); ?>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= get_site_url(null, '/perguntas-frequentes/'); ?>">
+                <span>
+                <?= __('Perguntas Frequentes', 'abdulay'); ?>
+                <div class="underline"></div>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= get_site_url(null, '/sobre/'); ?>">
+                <span>
+                <?= __('Sobre', 'abdulay'); ?>
+
+                <div class="underline"></div>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://blog.draabdulay.com" >
+                <span>
+                <?= __('Blog', 'abdulay'); ?>
+
+                <div class="underline"></div>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= get_site_url(null, '/contato/'); ?>">
+                <span>
+                <?= __('Contato', 'abdulay'); ?>
+
+                <div class="underline"></div>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>">
+                <span>
+                <?= __('Agende sua Consulta', 'abdulay'); ?>
+
+                <div class="underline"></div>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div> <!-- collapse -->
+      </div><!-- container -->
+
+    </nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

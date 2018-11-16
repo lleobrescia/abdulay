@@ -45,6 +45,7 @@
 
 # track readme.md in the root (i.e. do NOT ignore it)
 !readme.md
+!CHANGELOG.md
 
 # ignore all files that start with ~
 ~*
@@ -117,3 +118,9 @@ wp-content/themes/abdulay/\.jshintignore
 wp-content/themes/abdulay/style\.css
 
 wp-content/themes/abdulay/woocommerce\.css
+
+wp-content/themes/abdulay/rtl\.css
+
+wp-content/themes/abdulay/maps/
+
+wp-content/themes/abdulay/dist

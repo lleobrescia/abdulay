@@ -1,23 +1,20 @@
 /*!
-Theme Name: abdulay
-Theme URI: http://abdulay.com.br
-Author: Leo Brescia
-Author URI: leobrescia.com.br
-Description: Description
-Version: 1.0.0
+Theme Name: Dra. Abdulay Eziquiel
+Theme URI: http://draabdulay.com/
+Author: Leo Brescia <leonardo@leobrescia.com.br>
+Author URI: https://leobrescia.com.br/
+Description: This theme was developed especially for Dra. Abdulay Eziquiel, in partnership with Casa2 Design (https://sitedacasa.com/)
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: abdulay
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-abdulay is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Dra. Abdulay Eziquiel is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -27,6 +24,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Typography
 # Elements
 # Forms
+# Blocks
 # Navigation
 	## Links
 	## Menus
@@ -36,7 +34,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Widgets
 # Content
 	## Posts and pages
-	## Comments
+  ## Comments
+  ## Pages
 # Infinite scroll
 # Media
 	## Captions
@@ -56,6 +55,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "normalize";
 
+
+/*--------------------------------------------------------------
+# BxSlider
+--------------------------------------------------------------*/
+@import "modules/bxslider";
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+@import "modules/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -70,6 +81,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Forms
 --------------------------------------------------------------*/
 @import "forms/forms";
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+@import "blocks/blocks";
 
 /*--------------------------------------------------------------
 # Navigation
@@ -110,10 +126,3 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-/*--------------------------------------------------------------
-
-# Theme
---------------------------------------------------------------*/
-@import "theme";
-
