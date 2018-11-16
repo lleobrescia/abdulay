@@ -86,21 +86,30 @@
             <li class="nav-item dropdown dropdown--hover">
               <a class="nav-link" href="#" >
                 <span>
-                Procedimentos
+                <?= __('Procedimentos', 'abdulay'); ?>
+
                 <div class="underline"></div>
                 </span>
               </a>
               <div class="dropdown-menu dropdown-menu--hover" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-rosto/'); ?>">Face</a>
-                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>">Corpo</a>
-                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>">Mama</a>
-                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>">Estéticos</a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-rosto/'); ?>">
+                <?= __('Face', 'abdulay'); ?>
+                </a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>">
+                <?= __('Corpo', 'abdulay'); ?>
+                </a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>">
+                 <?= __('Mama', 'abdulay'); ?>
+                </a>
+                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>">
+                <?= __('Estéticos', 'abdulay'); ?>
+                </a>
               </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= get_site_url(null, '/perguntas-frequentes/'); ?>">
                 <span>
-                Perguntas Frequentes
+                <?= __('Perguntas Frequentes', 'abdulay'); ?>
                 <div class="underline"></div>
                 </span>
               </a>
@@ -108,7 +117,8 @@
             <li class="nav-item">
               <a class="nav-link" href="<?= get_site_url(null, '/sobre/'); ?>">
                 <span>
-                Sobre
+                <?= __('Sobre', 'abdulay'); ?>
+
                 <div class="underline"></div>
                 </span>
               </a>
@@ -116,7 +126,8 @@
             <li class="nav-item">
               <a class="nav-link" href="http://blog.draabdulay.com" >
                 <span>
-                Blog
+                <?= __('Blog', 'abdulay'); ?>
+
                 <div class="underline"></div>
                 </span>
               </a>
@@ -124,7 +135,8 @@
             <li class="nav-item">
               <a class="nav-link" href="<?= get_site_url(null, '/contato/'); ?>">
                 <span>
-                Contato
+                <?= __('Contato', 'abdulay'); ?>
+
                 <div class="underline"></div>
                 </span>
               </a>
@@ -132,7 +144,8 @@
             <li class="nav-item">
               <a class="nav-link" href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>">
                 <span>
-                Agende sua Consulta
+                <?= __('Agende sua Consulta', 'abdulay'); ?>
+
                 <div class="underline"></div>
                 </span>
               </a>

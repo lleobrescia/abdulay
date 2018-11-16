@@ -30,14 +30,16 @@ $lattes      = get_field('lattes', 'option');
           <dir class="row row--footer">
             <section class="col-sm-4 col-lg-3 offset-lg-1 p-0">
               <a href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" class="footer__chamada">
-                Agende sua <br>
-                consulta aqui &gt;
+              <?= __('Agende sua <br>
+                consulta aqui &gt;', 'abdulay'); ?>
               </a>
             </section><!-- col-sm-3 -->
 
             <section class="col-sm-5 offset-sm-1 footer__contato p-0">
               <br class="d-block d-md-none">
-              <h3>contato e atendimento</h3>
+              <h3>
+              <?= __('contato e atendimento', 'abdulay'); ?>
+              </h3>
 
               <div class="row">
                 <div class="col-lg-5">
@@ -55,24 +57,24 @@ $lattes      = get_field('lattes', 'option');
             <section class="footer__social">
               <br class="d-block d-md-none">
               <div class="footer__social-single">
-                <a href="<?= $facebook; ?>" title="Abdulay Eziquiel Facebook" rel="external" target="_blank">
+                <a href="<?= $facebook; ?>" title="<?= get_bloginfo('name');?> Facebook" rel="external" target="_blank">
                   <img src="<?= get_template_directory_uri(); ?>/images/icon-face.png" alt="">
                 </a>
-                <a href="<?= $instagram; ?>" title="Abdulay Eziquiel Instagram" rel="external" target="_blank">
+                <a href="<?= $instagram; ?>" title="<?= get_bloginfo('name');?> Instagram" rel="external" target="_blank">
                   <img src="<?= get_template_directory_uri(); ?>/images/icon-instagram.png" alt="">
                 </a>
-                <a href="<?= $whatsapp; ?>" title="Abdulay Eziquiel Whatsapp" rel="external" target="_blank">
+                <a href="<?= $whatsapp; ?>" title="<?= get_bloginfo('name');?> Whatsapp" rel="external" target="_blank">
                   <img src="<?= get_template_directory_uri(); ?>/images/icon-wathsapp.png" alt="">
                 </a>
               </div>
               <div class="footer__social-single">
-                <a href="<?= $twitter; ?>" title="Abdulay Eziquiel Twitter" rel="external" target="_blank">
+                <a href="<?= $twitter; ?>" title="<?= get_bloginfo('name');?> Twitter" rel="external" target="_blank">
                   <img src="<?= get_template_directory_uri(); ?>/images/icon-twitter.png" alt="">
                 </a>
-                <a href="<?= $lattes; ?>" title="Abdulay Eziquiel Twitter" rel="external" target="_blank">
+                <a href="<?= $lattes; ?>" title="<?= get_bloginfo('name');?> Twitter" rel="external" target="_blank">
                   <img src="<?= get_template_directory_uri(); ?>/images/icon-lattes.png" alt="">
                 </a>
-                <a href="<?= $linkedin; ?>" title="Abdulay Eziquiel LinkedIn" rel="external" target="_blank">
+                <a href="<?= $linkedin; ?>" title="<?= get_bloginfo('name');?> LinkedIn" rel="external" target="_blank">
                   <img src="<?= get_template_directory_uri(); ?>/images/icon-linkedin.png" alt="">
                 </a>
               </div>
@@ -83,7 +85,7 @@ $lattes      = get_field('lattes', 'option');
             <div class="col-lg-10 offset-lg-1">
               &copy
               <?= date("Y"); ?>
-              | Dra. Abdulay Eziquiel
+              | <?= get_bloginfo('name');?>
 
               <a href="https://sitedacasa.com/" rel="external" target="_blank">
                 casa2 design

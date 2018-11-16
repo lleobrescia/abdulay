@@ -31,8 +31,8 @@ function tirarAcentos($string){
             <header class="entry-header">
               <h1 class="entry-title ">
                 <span>
-                Procedimentos <br>
-                para o rosto
+                <?= __('Procedimentos <br> para o rosto', 'abdulay'); ?>
+
                 </span>
               </h1>
             </header><!-- .entry-header -->
@@ -77,10 +77,10 @@ function tirarAcentos($string){
             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 
             <div class="see-more">
-              <h4>veja também</h4>
-                <a href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>">Procedimentos para o corpo &gt;</a>
-                <a href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>">Procedimentos para a mama &gt;</a>
-                <a href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>">Procedimentos estéticos &gt;</a>
+              <h4><?= __('veja também', 'abdulay'); ?></h4>
+                <a href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>"><?= __('Procedimentos para o corpo &gt;', 'abdulay'); ?></a>
+                <a href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>"><?= __('Procedimentos para a mama &gt;', 'abdulay'); ?></a>
+                <a href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>"><?= __('Procedimentos estéticos &gt;', 'abdulay'); ?></a>
             </div><!-- see-more -->
           </div> <!-- col-md-6 -->
         </div><!-- row -->
@@ -88,19 +88,24 @@ function tirarAcentos($string){
         <section class="chamada row">
           <div class="col-md-7 p-0">
             <h2 class="chamada__title">
-              Agende sua consulta!
+            <?= __('Agende sua consulta!', 'abdulay'); ?>
+
             </h2>
-            <a class="chamada__title-link" href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" title="Agende sua consulta!"></a>
+            <a class="chamada__title-link" href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" title="<?= __('Agende sua consulta!', 'abdulay'); ?>"></a>
           </div><!-- col-md-7 -->
           <div class="col-md-4 col-lg-3  offset-md-1 chamada__info">
           <p>
-            Decidiu por algum procedimento ou ainda está em dúvida?
+          <?= __('Decidiu por algum procedimento ou ainda está em dúvida?', 'abdulay'); ?>
+
           </p>
 
-            <p>Conheça nosso espaço e converse comigo para obter mais informações!</p>
+            <p>
+            <?= __('Conheça nosso espaço e converse comigo para obter mais informações!', 'abdulay'); ?>
+            </p>
 
             <a href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" class="chamada__button btn btn-outline-primary">
-              clique aqui para agendar uma data
+            <?= __('clique aqui para agendar uma data', 'abdulay'); ?>
+
             </a>
           </div><!-- col-md-4  -->
         </section><!-- chamada -->

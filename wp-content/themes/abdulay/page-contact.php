@@ -35,8 +35,8 @@ $end         = get_field('endereço', 'option');
                 <header class="entry-header">
                   <h1 class="entry-title entry-title--has-bg entry-title--has-line">
                     <span>
-                    Dúvidas? <br>
-                    Entre em contato!
+                <?= __('Dúvidas? <br> Entre em contato!', 'abdulay'); ?>
+
                     </span>
                   </h1>
                   <div class="contact-info">
@@ -70,9 +70,11 @@ $end         = get_field('endereço', 'option');
           <div class="col-lg-10 offset-lg-2">
             <section class="contact-map">
               <div class="contact-map__title-box">
-                <h2>Nossa <br> localização</h2>
+                <h2>
+                <?= __('Nossa <br> localização', 'abdulay'); ?></h2>
                 <?php the_field('descrição'); ?>
-                <h3>Rio de Janeiro</h3>
+                <h3>
+                <?= __('Rio de Janeiro', 'abdulay'); ?></h3>
                 <address class="contact-map__title-box_end">
                 <?= $end; ?>
                 </address>
