@@ -25,8 +25,8 @@ get_header();
           <header class="entry-header">
             <h1 class="entry-title entry-title--has-bg entry-title--has-line">
               <span>
-              Perguntas <br>
-              Frequentes
+                <?= __('Perguntas <br> Frequentes', 'abdulay'); ?>
+
               </span>
             </h1>
           </header><!-- .entry-header -->

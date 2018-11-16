@@ -24,7 +24,8 @@ get_header();
           <header class="entry-header">
             <h1 class="entry-title entry-title--has-bg entry-title--has-line">
               <span>
-              Sobre mim
+                <?= __('Sobre mim', 'abdulay'); ?>
+
               </span>
             </h1>
           </header><!-- .entry-header -->
@@ -60,7 +61,8 @@ get_header();
           <header class="entry-header">
             <h1 class="entry-title entry-title--has-bg entry-title--has-line">
               <span>
-              O Consultório
+                <?= __('O Consultório', 'abdulay'); ?>
+
               </span>
             </h1>
           </header><!-- .entry-header -->

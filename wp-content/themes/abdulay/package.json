@@ -1,22 +1,13 @@
 {
-  "name": "abdulay",
-  "version": "1.0.3",
-  "description": "Tema de WordPress personalizado desenvolvido para a Casa2 Design",
+  "name": "dra.abdulay-eziquiel",
+  "version": "1.1.0",
+  "description": "This is a Wordpress theme, developed especially for Dra. Abdulay Eziquiel. In partnership with Casa2 Design (https://sitedacasa.com/)",
   "author": "Leo Brescia",
-  "license": "MIT",
+  "license": "GPL",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mnyorba/generator-npm-wp-s-theme"
+    "url": "https://bitbucket.org/LeoBrescia/abdulay/"
   },
-  "bugs": "https://github.com/mnyorba/generator-npm-wp-s-theme/issues",
-  "keywords": [
-    "npm",
-    "scripts",
-    "npm scripts",
-    "watch",
-    "minify",
-    "compress"
-  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -46,13 +37,12 @@
     "watch:css": "onchange \"sass\" -- run-s scss autoprefixer",
     "watch": "run-p serve watch:*",
     "imagemin": "imagemin images/**/*.{jpg,png} -o dist/images",
-    "build-css:style": "node-sass --output-style expanded --indent-type tab --indent-width 1 --source-map maps --source-map-contents true --precision 6 --omit-source-map-url sass/style.scss dist/abdulay/style.css",
+    "build-css:style": "node-sass --output-style expanded --indent-type tab --indent-width 1 sass/style.scss dist/abdulay/style.css",
     "build-css": "run-p  --continue-on-error --print-label --silent --aggregate-output build-css:*",
     "build:images": "run-s imagemin",
-    "build": "run-s -l clean copy build-css:* archive",
+    "build": "run-s -l clean copy build-css:*",
     "clean": "rimraf dist/**/*",
-    "copy": "copyfiles --exclude \"dist/**\" --exclude \"maps/**\" --exclude \"node_modules/**\" --exclude \"sass/**\" --exclude \"package-lock.json\" --exclude \"package.json\" --exclude \"bower_components/**\" *.* **/**  dist/abdulay && echo Files copied.",
-    "archive": "echo Create abdulay.zip & cross-zip dist/abdulay dist/abdulay.zip"
+    "copy": "copyfiles --exclude \"dist/**\" --exclude \"maps/**\" --exclude \"node_modules/**\" --exclude \"sass/**\" --exclude \"package-lock.json\" --exclude \"package.json\" --exclude \"bower_components/**\" *.* **/**  dist/abdulay && echo Files copied."
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",

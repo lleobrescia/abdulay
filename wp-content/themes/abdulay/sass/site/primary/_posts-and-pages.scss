@@ -56,12 +56,16 @@
     color: $blue;
     display: inline-block;
     font-family: $font__sec;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 13px;
     position: relative;
     z-index: 2;
     line-height: 1.0;
     font-weight: bold;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
 
     &--has-line {
       margin-bottom: 48px;

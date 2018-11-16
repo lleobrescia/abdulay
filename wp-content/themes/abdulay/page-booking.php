@@ -24,8 +24,8 @@ get_header();
           <header class="entry-header">
             <h1 class="entry-title entry-title--has-bg">
               <span>
-              Agende sua <br>
-              Consulta
+                <?= __('Agende sua <br> Consulta', 'abdulay'); ?>
+
               </span>
             </h1>
           </header><!-- .entry-header -->

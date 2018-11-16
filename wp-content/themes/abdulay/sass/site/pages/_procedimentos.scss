@@ -131,6 +131,10 @@
         color: #626462;
         font-size: .8125rem;
         text-transform: uppercase;
+
+        &:hover {
+          color: white !important;
+        }
       }
 
       p {

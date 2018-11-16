@@ -53,12 +53,12 @@ get_header();
         <div class="container">
           <div class="row">
             <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-block">
-              <img src="<?= get_template_directory_uri() ?>/images/foto-home.png" alt="Dra. Abdulay Eziquiel">
+              <img src="<?= get_template_directory_uri() ?>/images/foto-home.png" alt="<?= get_bloginfo('name');?>">
             </div><!-- col-md-5 -->
             <div class="col-md-7 col-lg-6 home-sobre__text">
               <h2 class="entry-title">
                 <span>
-                 Sobre mim
+                <?= __('Sobre mim', 'abdulay'); ?>
                 </span>
               </h2>
               <?php the_field('sobre_mim'); ?>
@@ -66,8 +66,7 @@ get_header();
               <div class="home-sobre__nome">
                 <hr>
                 <p>
-                  Cirurgiã Plástica Estética e Reparadora <br> Membro da Sociedade Brasileira de Cirugia Plástica
-
+                <?= __('Cirurgiã Plástica Estética e Reparadora <br> Membro da Sociedade Brasileira de Cirugia Plástica', 'abdulay'); ?>
                 </p>
               </div><!-- home-sobre__nome -->
             </div><!-- col-md-7 -->
@@ -82,7 +81,7 @@ get_header();
             <div class="col-md-10 offset-2">
               <h2 class="entry-title entry-title--has-bg">
                 <span>
-                Conheça os nossos <br> procedimentos
+                <?= __('Conheça os nossos <br> procedimentos', 'abdulay'); ?>
                 </span>
               </h2>
             </div><!-- col-md-10 -->
@@ -98,45 +97,46 @@ get_header();
             <section class="col-md-3" >
               <div class="home-proc__single" style="background: url('<?= $rosto['url']; ?>')">
                 <h4 class="home-proc__title">
-                  ROSTO
+                <?= __('ROSTO', 'abdulay'); ?>
+
                 </h4>
 
                 <footer class="home-proc__footer">
                   <hr>
-                  <a href="" title="Saiba mais">Saiba mais &gt;</a>
+                  <a href="" title="Saiba mais"> <?= __('Saiba mais &gt;', 'abdulay'); ?></a>
                 </footer><!-- home-proc__footer -->
               </div><!-- home-proc__single -->
             </section><!-- col-md-3 -->
             <section class="col-md-3" >
               <div class="home-proc__single" style="background: url('<?= $corpo['url']; ?>')">
                 <h4 class="home-proc__title">
-                  CORPO
+                <?= __('CORPO', 'abdulay'); ?>
                 </h4>
                 <footer class="home-proc__footer">
                   <hr>
-                  <a href="" title="Saiba mais">Saiba mais &gt;</a>
+                  <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
                 </footer><!-- home-proc__footer -->
               </div><!-- home-proc__single -->
             </section><!-- col-md-3 -->
             <section class="col-md-3" >
              <div class="home-proc__single" style="background: url('<?= $mama['url']; ?>')">
                 <h4 class="home-proc__title">
-                  MAMA
+                <?= __('MAMA', 'abdulay'); ?>
                 </h4>
                 <footer class="home-proc__footer">
                   <hr>
-                  <a href="" title="Saiba mais">Saiba mais &gt;</a>
+                  <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
                 </footer><!-- home-proc__footer -->
               </div><!-- home-proc__single -->
             </section><!-- col-md-3 -->
             <section class="col-md-3" >
              <div class="home-proc__single" style="background: url('<?= $esteticos['url']; ?>')">
               <h4 class="home-proc__title">
-                  ESTÉTICOS
-                </h4>
-                <footer class="home-proc__footer">
+                  <?= __('ESTÉTICOS', 'abdulay'); ?>
+              </h4>
+              <footer class="home-proc__footer">
                   <hr>
-                  <a href="" title="Saiba mais">Saiba mais &gt;</a>
+                  <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
                 </footer><!-- home-proc__footer -->
               </div><!-- home-proc__single -->
             </section><!-- col-md-3 -->
@@ -152,7 +152,8 @@ get_header();
             <div class="home-depo__container">
               <h3 class="entry-title">
                 <span>
-                  Depoimentos
+
+                  <?= __('Depoimentos', 'abdulay'); ?>
                 </span>
               </h3>
 
@@ -191,10 +192,11 @@ get_header();
     <section class="home-loca">
       <div class="container">
         <div class="row">
-          <div class="col-md-5 col-lg-4 oofest-lg-1">
+          <div class="col-md-5 col-lg-4 offset-lg-1">
             <h3 class="entry-title entry-title--has-bg">
               <span>
-                Localização e <br> atendimento
+                <?= __('Localização e <br> atendimento', 'abdulay'); ?>
+
               </span>
             </h3>
 
@@ -203,7 +205,7 @@ get_header();
             </div><!-- home-loca__end -->
 
             <div class="home-loca__address">
-              <h4>Rio de Janeiro</h4>
+              <h4> <?= __('Rio de Janeiro', 'abdulay'); ?></h4>
                 <address>
                 <?= get_field('endereço', 'option'); ?>
                 </address>
@@ -211,18 +213,241 @@ get_header();
           </div><!-- col-md-5 -->
 
           <div class="col-md-6 col-lg-5 offset-lg-1 home-loca__map">
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="476" height="526" id="gmap_canvas" src="https://maps.google.com/maps?q=Av.%20Ataulfo%20de%20Paiva%2C%20135&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div><style>.mapouter{text-align:right;height:526px;width:476px;}.gmap_canvas {overflow:hidden;background:none!important;height:526px;width:476px;}</style></div>
+            <div id="map"></div>
           </div>
         </div><!-- row -->
       </div><!-- container -->
     </section><!-- home-loca -->
   </div><!-- #primary -->
 
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1EBOvfM7saQfe_VMnesaWMHzgmKrljKk"></script>
+
+  <script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+      // Basic options for a simple Google Map
+      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+      var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 16,
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(-22.983780, -43.217160), // New York
+        // How you would like to style the map.
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: [
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#333333"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "color": "#9dc3b5"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dedede"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#dddddd"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#dddddd"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dddddd"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dddddd"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dddddd"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dddddd"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    }
+]
+      };
+      var pinColor = "75baa1";
+      var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0,0),
+        new google.maps.Point(10, 34));
+      var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+        new google.maps.Size(40, 37),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(12, 35));
+      // Get the HTML DOM element that will contain your map
+      // We are using a div with id="map" seen below in the <body>
+      var mapElement = document.getElementById('map');
+      // Create the Google Map using our element and options defined above
+      var map = new google.maps.Map(mapElement, mapOptions);
+      // Let's also add a marker while we're at it
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(-22.983780, -43.217160),
+        map: map,
+        icon: pinImage,
+        shadow: pinShadow
+      });
+    }
+  </script>
 <script>
   jQuery(document).ready(function(){
     jQuery('.bxslider--depo').bxSlider({
       pager: false,
-      auto: true
+      auto: true,
+      pause: 8000
     });
   });
   jQuery(document).ready(function(){
@@ -230,9 +455,18 @@ get_header();
       pager: false,
       auto: true,
       nextText: " ",
-      prevText: " "
+      prevText: " ",
+      pause: 8000
     });
   });
 </script>
+<style type="text/css">
+  /* Set a size for our map container, the Google Map will take up 100% of this container */
+  #map {
+    width: 100%;
+    min-height: 526px;
+    height: 100%;
+  }
+</style>
 <?php
 get_footer();
