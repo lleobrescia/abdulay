@@ -21,10 +21,15 @@
     }
 
     .entry-title {
-      font-size: 2.5625rem;
+      font-size: 1rem;
       font-weight: 400;
       margin: 0;
-      max-width: 525px;
+      max-width: 200px;
+
+      @media screen and (min-width: 38.75rem) {
+        font-size: 2.5625rem;
+        max-width: 525px;
+      }
     }
 
     img {
@@ -87,11 +92,15 @@
         height: 401px;
         left: -50px;
         position: absolute;
-        width: 381px;
+        width: 200px;
         z-index: 1;
 
         @include media-breakpoint-down(md) {
           z-index: 3;
+        }
+
+        @media screen and (min-width: 38.75rem) {
+          width: 381px;
         }
       }
 
@@ -109,8 +118,13 @@
 
       p {
         color: #626462;
-        font-size: 15px;
-        max-width: 400px;
+        font-size: .6875rem;
+        max-width: 200px;
+
+        @media screen and (min-width: 38.75rem) {
+          max-width: 400px;
+          font-size: .9375rem;
+        }
       }
     }
   }
@@ -142,7 +156,11 @@
     }
 
     &__nome {
-      margin-top: 82px;
+      margin-top: 200px;
+
+      @media screen and(min-width: 21.875rem) {
+        margin-top: 82px;
+      }
 
       hr {
         background: #abc5c5;
