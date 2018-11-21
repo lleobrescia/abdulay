@@ -50,6 +50,7 @@ function tirarAcentos($string){
             ?>
             <div class="proc__select">
               <select ng-model="proc.filter" name="" id="">
+                <option value="">Escolha um Procedimento</option>
             <?php while ( $proc->have_posts() ) :  $proc->the_post();
               if($default == null) $default =tirarAcentos(get_the_title());
             ?>
@@ -85,7 +86,7 @@ function tirarAcentos($string){
           </div> <!-- col-md-6 -->
         </div><!-- row -->
 
-        <section class="chamada row">
+        <section class="chamada row ">
           <div class="col-md-7 p-0">
             <h2 class="chamada__title">
             <?= __('Agende sua consulta!', 'abdulay'); ?>
@@ -93,7 +94,7 @@ function tirarAcentos($string){
             </h2>
             <a class="chamada__title-link" href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" title="<?= __('Agende sua consulta!', 'abdulay'); ?>"></a>
           </div><!-- col-md-7 -->
-          <div class="col-md-4 col-lg-3  offset-md-1 chamada__info">
+          <div class="col-md-4 col-lg-3  offset-md-1 chamada__info mb-5 md-md-0">
           <p>
           <?= __('Decidiu por algum procedimento ou ainda está em dúvida?', 'abdulay'); ?>
 
@@ -110,7 +111,7 @@ function tirarAcentos($string){
           </div><!-- col-md-4  -->
         </section><!-- chamada -->
 
-        <section class="row citacao">
+        <section class="row citacao d-none d-lg-block">
           <div class="col-md-7 p-0">
             <h3 class="citacao__title">
               <?php the_field('titulo', 'option'); ?>
@@ -140,7 +141,7 @@ function tirarAcentos($string){
 
   function ProcController($window) {
     var vm     = this;
-    vm.filter  = '<?= $default ?>';
+    vm.filter  = '';
   }
 })();
 </script>

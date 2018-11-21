@@ -3,6 +3,11 @@
     border: none;
     outline: none;
 
+    @media screen and (max-width: 400px) {
+      padding: 0;
+      min-width: auto;
+    }
+
     .navbar-toggler-icon {
       color: $blue;
       font-size: 1.875rem;
@@ -13,6 +18,11 @@
   &-abdulay {
     margin-top: 5px;
     margin-bottom: 70px;
+    padding-top: 64px;
+
+    @media screen and(min-width: 30rem) {
+      padding-top: 30px;
+    }
 
     .navbar-nav {
       margin: 0;
@@ -118,6 +128,12 @@
             }
           }
         }
+      }
+    }
+
+    .navbar-brand {
+      @media screen and (max-width: 400px) {
+        margin: 0;
       }
     }
   }

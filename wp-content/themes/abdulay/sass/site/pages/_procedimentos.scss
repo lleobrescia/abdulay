@@ -113,14 +113,20 @@
     }
 
     &__title {
-      background: url("images/bg_title.png") no-repeat center;
+      background: url(images/bg_title.png) no-repeat center;
       color: #fffaf8;
-      font-family: $font__sec;
-      font-size: 3rem;
-      height: 207px;
-      padding-right: 110px;
-      padding-top: 77px;
-      text-align: right;
+      font-family: "gt super", serif;
+      font-size: 2rem;
+      min-height: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+
+      @media screen and (min-width: 38.125rem) {
+        font-size: 3rem;
+        min-height: 207px;
+      }
     }
 
     &__info {

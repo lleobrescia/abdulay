@@ -11,7 +11,7 @@
 
   &__photo {
     @include media-breakpoint-down(sm) {
-      display: none;
+      text-align: center;
     }
 
     img {
