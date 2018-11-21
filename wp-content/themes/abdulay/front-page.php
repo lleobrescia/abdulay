@@ -34,7 +34,9 @@ get_header();
               <?php the_sub_field('texto'); ?>
             </div>
           </div>
-          <img src="<?= get_sub_field('imagem')['url']; ?>" alt="">
+          <div>
+            <img src="<?= get_sub_field('imagem')['url']; ?>" alt="">
+          </div>
         </li>
          <?php
             endwhile;

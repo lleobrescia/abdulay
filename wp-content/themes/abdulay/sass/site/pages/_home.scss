@@ -24,7 +24,10 @@
       font-size: 1rem;
       font-weight: 400;
       margin: 0;
-      max-width: 200px;
+
+      @media screen and (min-width: 30rem) {
+        max-width: 200px;
+      }
 
       @media screen and (min-width: 38.75rem) {
         font-size: 2.5625rem;
@@ -49,8 +52,18 @@
       text-align: right;
       width: 100%;
 
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
       li {
         transition: opacity 2s;
+
+        @media screen and (max-width: 30rem) {
+          display: flex;
+          flex-wrap: wrap-reverse;
+        }
       }
 
       li[aria-hidden="true"] {
@@ -58,19 +71,39 @@
       }
 
       .bx-controls-direction {
-        bottom: 83px;
+        bottom: 56px;
         position: absolute;
-        right: 627px;
-        width: 75px;
+        right: -10px;
+        width: 100%;
+
+        @media screen and (min-width: 30rem) {
+          bottom: 63px;
+          position: absolute;
+          right: 627px;
+          width: 75px;
+        }
+
+        @media screen and (min-width: 66.125rem) {
+          bottom: 83px;
+        }
       }
 
       .bx-next {
         background: url("images/right-arrow-blue.png") no-repeat;
+        right: 0;
+
+        @media screen and (min-width: 30rem) {
+          right: 10px;
+        }
       }
 
       .bx-prev {
         background: url("images/left-arrow-blue.png") no-repeat;
-        left: -25px;
+        left: 0;
+
+        @media screen and (min-width: 30rem) {
+          left: -25px;
+        }
       }
     }
 
@@ -79,24 +112,34 @@
       bottom: 0;
       display: flex;
       margin: auto;
-      position: absolute;
       top: 0;
+      text-align: center;
+      padding-top: 8px;
+
+      @media screen and (min-width: 30rem) {
+        padding-top: 0;
+        text-align: initial;
+        position: absolute;
+      }
 
       @include media-breakpoint-up(lg) {
         right: 656px;
       }
 
       &::before {
-        background: url('images/bg-title.png') no-repeat center;
+        background: #f2f1ef;
         content: "";
         height: 401px;
-        left: -50px;
+        left: 0;
         position: absolute;
-        width: 200px;
+        width: 100%;
         z-index: 1;
 
-        @include media-breakpoint-down(md) {
+        @media screen and (min-width: 30rem) {
           z-index: 3;
+          left: -50px;
+          width: 200px;
+          background: url('images/bg-title.png') no-repeat center;
         }
 
         @media screen and (min-width: 38.75rem) {
@@ -119,7 +162,11 @@
       p {
         color: #626462;
         font-size: .6875rem;
-        max-width: 200px;
+
+
+        @media screen and (min-width: 30rem) {
+          max-width: 200px;
+        }
 
         @media screen and (min-width: 38.75rem) {
           max-width: 400px;
