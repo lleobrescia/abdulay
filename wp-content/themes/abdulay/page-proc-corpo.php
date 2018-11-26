@@ -46,14 +46,11 @@ function tirarAcentos($string){
 
               // The Query
               $proc = new WP_Query( $argsProc );
-              $default = null;
             ?>
             <div class="proc__select">
               <select ng-model="proc.filter" name="" id="">
                 <option value="">Escolha um Procedimento</option>
-            <?php while ( $proc->have_posts() ) :  $proc->the_post();
-              if($default == null) $default =tirarAcentos(get_the_title());
-            ?>
+            <?php while ( $proc->have_posts() ) :  $proc->the_post(); ?>
 
             <option  value="<?= tirarAcentos(get_the_title());?>">
               <?php the_title(); ?>
@@ -74,8 +71,10 @@ function tirarAcentos($string){
           </div><!-- col -->
           <?php wp_reset_query(); ?>
           <div class="col-md-6 offset-lg-1 p-0 d-none d-lg-block">
-            <?php $image = get_field('imagem'); ?>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+            <?php while ( $proc->have_posts() ) :  $proc->the_post();  ?>
+              <?php $image = get_field('imagem', get_the_ID()); ?>
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" ng-if="proc.filter === '<?= tirarAcentos(get_the_title());?>'" >
+            <?php endwhile; // End of the loop. ?>
 
             <div class="see-more">
               <h4>
@@ -112,7 +111,7 @@ function tirarAcentos($string){
           </div><!-- col-md-4  -->
         </section><!-- chamada -->
 
-        <section class="row citacao d-none d-lg-block">
+        <section class="row citacao d-none d-lg-flex">
           <div class="col-md-7 p-0">
             <h3 class="citacao__title">
               <?php the_field('titulo', 'option'); ?>
