@@ -1,4 +1,8 @@
 .proc {
+  .entry-title {
+    text-transform: uppercase;
+  }
+
   &__select {
     select {
       border-left: none;
