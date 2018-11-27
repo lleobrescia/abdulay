@@ -96,6 +96,8 @@
               $args = array(
                 'post_type' => 'page',
                 'posts_per_page' => -1,
+                'orderby' => 'title',
+                'order'   => 'ASC',
                 'meta_query' => array(
                   array(
                     'key' => '_wp_page_template',

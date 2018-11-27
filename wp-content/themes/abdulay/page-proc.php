@@ -41,6 +41,8 @@ $this_id = get_the_ID();
               $cat =  get_field('categoria');
               $argsProc = array(
                 'posts_per_page' => '-1',
+                'orderby' => 'title',
+                'order'   => 'ASC',
                 'category_name'  =>  $cat->slug,
                 'post_type'      => 'procedimento'
               );
@@ -88,6 +90,8 @@ $this_id = get_the_ID();
                 $args = array(
                   'post_type' => 'page',
                   'posts_per_page' => -1,
+                  'orderby' => 'title',
+                  'order'   => 'ASC',
                   'meta_query' => array(
                     array(
                       'key' => '_wp_page_template',
