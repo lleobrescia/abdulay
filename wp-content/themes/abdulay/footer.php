@@ -71,7 +71,7 @@ $lattes      = get_field('lattes', 'option');
                 <a href="<?= $twitter; ?>" title="<?= get_bloginfo('name');?> Twitter" rel="external" target="_blank">
                   <img src="<?= get_template_directory_uri(); ?>/images/icon-twitter.png" alt="">
                 </a>
-                <a href="<?= $lattes; ?>" title="<?= get_bloginfo('name');?> Twitter" rel="external" target="_blank">
+                <a href="<?= $lattes; ?>" title="<?= get_bloginfo('name');?> Lattes" rel="external" target="_blank">
                   <img src="<?= get_template_directory_uri(); ?>/images/icon-lattes.png" alt="">
                 </a>
                 <a href="<?= $linkedin; ?>" title="<?= get_bloginfo('name');?> LinkedIn" rel="external" target="_blank">
