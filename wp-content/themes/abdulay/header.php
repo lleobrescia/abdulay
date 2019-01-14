@@ -94,13 +94,14 @@
               <div class="dropdown-menu dropdown-menu--hover" aria-labelledby="navbarDropdown">
               <?php
               $args = array(
-                'post_type' => 'page',
-                'posts_per_page' => -1,
-                'orderby' => 'title',
-                'order'   => 'ASC',
-                'meta_query' => array(
+                'post_type'       => 'page',
+                'posts_per_page'  => -1,
+                'meta_key'        => 'nome_no_menu',
+                'orderby'         => 'meta_value',
+                'order'           => 'ASC',
+                'meta_query'      => array(
                   array(
-                    'key' => '_wp_page_template',
+                    'key'   => '_wp_page_template',
                     'value' => 'page-proc.php'
                   )
                 )
