@@ -1,10 +1,14 @@
 .site-header {
   &__top {
-    background-color: $color__background-top;
+    background-color: #619495;
     color: white;
     font-size: .8125rem;
     min-height: 30px;
     text-align: right;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    top: 0;
 
     @media screen and (min-width: 25rem) {
       line-height: 32px;
@@ -55,6 +59,4 @@
       }
     }
   }
-
-
 }

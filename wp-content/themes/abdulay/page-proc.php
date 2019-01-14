@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Procedimento Mama
+ * Template Name: Procedimento
  *
  * The template for displaying procedimento content
  *
@@ -21,6 +21,7 @@ function tirarAcentos($string){
 
    return preg_replace('/\s+/', '', $string);
 }
+$this_id = get_the_ID();
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
 	<div id="primary" class="content-area proc" ng-controller="ProcController as proc">
@@ -31,34 +32,34 @@ function tirarAcentos($string){
             <header class="entry-header">
               <h1 class="entry-title ">
                 <span>
-                <?= __('Procedimentos <br> para a mama', 'abdulay'); ?>
-
+                  <?php the_title(); ?>
                 </span>
               </h1>
             </header><!-- .entry-header -->
             <?php
               // WP_Query arguments
+              $cat =  get_field('categoria');
               $argsProc = array(
                 'posts_per_page' => '-1',
-                'category_name'  => 'mama',
+                'orderby' => 'title',
+                'order'   => 'ASC',
+                'category_name'  =>  $cat->slug,
                 'post_type'      => 'procedimento'
               );
 
               // The Query
               $proc = new WP_Query( $argsProc );
-              $default = null;
             ?>
             <div class="proc__select">
               <select ng-model="proc.filter" name="" id="">
-            <?php while ( $proc->have_posts() ) :  $proc->the_post();
-              if($default == null) $default =tirarAcentos(get_the_title());
-            ?>
+                <option value="">Escolha um Procedimento</option>
+                <?php while ( $proc->have_posts() ) :  $proc->the_post(); ?>
 
-            <option  value="<?= tirarAcentos(get_the_title());?>">
-              <?php the_title(); ?>
-            </option>
+                <option  value="<?= tirarAcentos(get_the_title());?>">
+                  <?php the_title(); ?>
+                </option>
 
-            <?php endwhile; // End of the loop. ?>
+                <?php endwhile; // End of the loop. ?>
               </select>
             </div><!-- proc__select -->
 
@@ -71,21 +72,53 @@ function tirarAcentos($string){
 
             </section><!-- proc__content -->
           </div><!-- col -->
+
           <?php wp_reset_query(); ?>
-          <div class="col-md-6 offset-lg-1 p-0 d-none d-lg-block">
-            <?php $image = get_field('imagem'); ?>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+          <div class="col-lg-6 offset-lg-1 p-0 text-center">
+
+            <?php while ( $proc->have_posts() ) :  $proc->the_post();  ?>
+              <?php $image = get_field('imagem', get_the_ID()); ?>
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" ng-if="proc.filter === '<?= tirarAcentos(get_the_title());?>'" >
+            <?php endwhile; // End of the loop. ?>
 
             <div class="see-more">
-              <h4><?= __('veja também', 'abdulay'); ?></h4>
-              <a href="<?= get_site_url(null, '/procedimentos-para-o-rosto/'); ?>"><?= __('Procedimentos para o rosto &gt;', 'abdulay'); ?></a>
-                <a href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>"><?= __('Procedimentos para o corpo &gt;', 'abdulay'); ?></a>
-                <a href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>"><?= __('Procedimentos estéticos &gt;', 'abdulay'); ?></a>
+              <h4>
+                <?= __('veja também', 'abdulay'); ?>
+              </h4>
+              <?php
+
+                $args = array(
+                  'post_type' => 'page',
+                  'posts_per_page' => -1,
+                  'orderby' => 'title',
+                  'order'   => 'ASC',
+                  'meta_query' => array(
+                    array(
+                      'key' => '_wp_page_template',
+                      'value' => 'page-proc.php'
+                    )
+                  )
+                );
+                $the_pages = new WP_Query( $args );
+
+                if( $the_pages->have_posts() ):
+                  while( $the_pages->have_posts() ):
+                    $the_pages->the_post();
+
+                    $that_id = get_the_ID();
+                    if($this_id === $that_id) continue
+                ?>
+                <a href="<?= get_permalink() ?>"> <?php the_title(); ?> &gt;</a>
+              <?php
+                    endwhile;
+                endif;
+                wp_reset_postdata();
+              ?>
             </div><!-- see-more -->
           </div> <!-- col-md-6 -->
         </div><!-- row -->
 
-        <section class="chamada row">
+        <section class="chamada row ">
           <div class="col-md-7 p-0">
             <h2 class="chamada__title">
             <?= __('Agende sua consulta!', 'abdulay'); ?>
@@ -93,24 +126,22 @@ function tirarAcentos($string){
             </h2>
             <a class="chamada__title-link" href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" title="<?= __('Agende sua consulta!', 'abdulay'); ?>"></a>
           </div><!-- col-md-7 -->
-          <div class="col-md-4 col-lg-3  offset-md-1 chamada__info">
-          <p>
-          <?= __('Decidiu por algum procedimento ou ainda está em dúvida?', 'abdulay'); ?>
-
-          </p>
+          <div class="col-md-4 col-lg-3  offset-md-1 chamada__info mb-5 md-md-0">
+            <p>
+              <?= __('Decidiu por algum procedimento ou ainda está em dúvida?', 'abdulay'); ?>
+            </p>
 
             <p>
-            <?= __('Conheça nosso espaço e converse comigo para obter mais informações!', 'abdulay'); ?>
+              <?= __('Conheça nosso espaço e converse comigo para obter mais informações!', 'abdulay'); ?>
             </p>
 
             <a href="<?= get_site_url(null, '/agende-sua-consulta/'); ?>" class="chamada__button btn btn-outline-primary">
-            <?= __('clique aqui para agendar uma data', 'abdulay'); ?>
-
+              <?= __('clique aqui para agendar uma data', 'abdulay'); ?>
             </a>
           </div><!-- col-md-4  -->
         </section><!-- chamada -->
 
-        <section class="row citacao">
+        <section class="row citacao d-none d-lg-flex">
           <div class="col-md-7 p-0">
             <h3 class="citacao__title">
               <?php the_field('titulo', 'option'); ?>
@@ -140,7 +171,7 @@ function tirarAcentos($string){
 
   function ProcController($window) {
     var vm     = this;
-    vm.filter  = '<?= $default ?>';
+    vm.filter  = '';
   }
 })();
 </script>

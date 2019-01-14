@@ -34,7 +34,9 @@ get_header();
               <?php the_sub_field('texto'); ?>
             </div>
           </div>
-          <img src="<?= get_sub_field('imagem')['url']; ?>" alt="">
+          <div>
+            <img src="<?= get_sub_field('imagem')['url']; ?>" alt="">
+          </div>
         </li>
          <?php
             endwhile;
@@ -52,7 +54,7 @@ get_header();
       <section class="home-sobre">
         <div class="container">
           <div class="row">
-            <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-block">
+            <div class="col-lg-4 col-md-5 d-block offset-lg-1 text-center mb-5 mb-md-0">
               <img src="<?= get_template_directory_uri() ?>/images/foto-home.png" alt="<?= get_bloginfo('name');?>">
             </div><!-- col-md-5 -->
             <div class="col-md-7 col-lg-6 home-sobre__text">
@@ -96,30 +98,37 @@ get_header();
             ?>
             <section class="col-md-3" >
               <div class="home-proc__single" style="background: url('<?= $rosto['url']; ?>')">
+              <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-face/'); ?>" title="Saiba mais"> </a>
+               <div>
                 <h4 class="home-proc__title">
-                <?= __('ROSTO', 'abdulay'); ?>
+                  <?= __('Face', 'abdulay'); ?>
+                  </h4>
 
-                </h4>
-
-                <footer class="home-proc__footer">
-                  <hr>
-                  <a href="" title="Saiba mais"> <?= __('Saiba mais &gt;', 'abdulay'); ?></a>
-                </footer><!-- home-proc__footer -->
+                  <footer class="home-proc__footer">
+                    <hr>
+                    <a href="" title="Saiba mais"> <?= __('Saiba mais &gt;', 'abdulay'); ?></a>
+                  </footer><!-- home-proc__footer -->
+               </div>
               </div><!-- home-proc__single -->
             </section><!-- col-md-3 -->
             <section class="col-md-3" >
               <div class="home-proc__single" style="background: url('<?= $corpo['url']; ?>')">
-                <h4 class="home-proc__title">
-                <?= __('CORPO', 'abdulay'); ?>
-                </h4>
-                <footer class="home-proc__footer">
-                  <hr>
-                  <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
-                </footer><!-- home-proc__footer -->
+               <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>" title="Saiba mais"> </a>
+                <div>
+                  <h4 class="home-proc__title">
+                  <?= __('CORPO', 'abdulay'); ?>
+                  </h4>
+                  <footer class="home-proc__footer">
+                    <hr>
+                    <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
+                  </footer><!-- home-proc__footer -->
+                </div>
               </div><!-- home-proc__single -->
             </section><!-- col-md-3 -->
             <section class="col-md-3" >
              <div class="home-proc__single" style="background: url('<?= $mama['url']; ?>')">
+              <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>" title="Saiba mais"> </a>
+               <div>
                 <h4 class="home-proc__title">
                 <?= __('MAMA', 'abdulay'); ?>
                 </h4>
@@ -127,17 +136,21 @@ get_header();
                   <hr>
                   <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
                 </footer><!-- home-proc__footer -->
+               </div>
               </div><!-- home-proc__single -->
             </section><!-- col-md-3 -->
             <section class="col-md-3" >
              <div class="home-proc__single" style="background: url('<?= $esteticos['url']; ?>')">
-              <h4 class="home-proc__title">
+              <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>" title="Saiba mais"> </a>
+              <div>
+                <h4 class="home-proc__title">
                   <?= __('ESTÉTICOS', 'abdulay'); ?>
-              </h4>
-              <footer class="home-proc__footer">
+                </h4>
+                <footer class="home-proc__footer">
                   <hr>
                   <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
                 </footer><!-- home-proc__footer -->
+              </div>
               </div><!-- home-proc__single -->
             </section><!-- col-md-3 -->
           </div><!-- row -->
@@ -204,7 +217,7 @@ get_header();
             <?php the_field("localização_e_atendimento"); ?>
             </div><!-- home-loca__end -->
 
-            <div class="home-loca__address">
+            <div class="home-loca__address mb-4 mb-md-0">
               <h4> <?= __('Rio de Janeiro', 'abdulay'); ?></h4>
                 <address>
                 <?= get_field('endereço', 'option'); ?>
@@ -447,7 +460,8 @@ get_header();
     jQuery('.bxslider--depo').bxSlider({
       pager: false,
       auto: true,
-      pause: 8000
+      pause: 8000,
+      touchEnabled:false
     });
   });
   jQuery(document).ready(function(){
@@ -456,7 +470,8 @@ get_header();
       auto: true,
       nextText: " ",
       prevText: " ",
-      pause: 8000
+      pause: 8000,
+      touchEnabled:false
     });
   });
 </script>

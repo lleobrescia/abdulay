@@ -92,18 +92,34 @@
                 </span>
               </a>
               <div class="dropdown-menu dropdown-menu--hover" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-rosto/'); ?>">
-                <?= __('Face', 'abdulay'); ?>
-                </a>
-                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>">
-                <?= __('Corpo', 'abdulay'); ?>
-                </a>
-                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>">
-                 <?= __('Mama', 'abdulay'); ?>
-                </a>
-                <a class="dropdown-item" href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>">
-                <?= __('Estéticos', 'abdulay'); ?>
-                </a>
+              <?php
+              $args = array(
+                'post_type'       => 'page',
+                'posts_per_page'  => -1,
+                'meta_key'        => 'nome_no_menu',
+                'orderby'         => 'meta_value',
+                'order'           => 'ASC',
+                'meta_query'      => array(
+                  array(
+                    'key'   => '_wp_page_template',
+                    'value' => 'page-proc.php'
+                  )
+                )
+              );
+              $the_pages = new WP_Query( $args );
+
+              if( $the_pages->have_posts() ):
+                while( $the_pages->have_posts() ):
+                  $the_pages->the_post();
+              ?>
+              <a class="dropdown-item" href="<?= get_permalink() ?>">
+                <?= get_field('nome_no_menu', get_the_ID()); ?>
+              </a>
+              <?php
+                  endwhile;
+              endif;
+              wp_reset_postdata();
+              ?>
               </div>
             </li>
             <li class="nav-item">
