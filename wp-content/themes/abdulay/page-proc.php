@@ -74,7 +74,7 @@ $this_id = get_the_ID();
           </div><!-- col -->
 
           <?php wp_reset_query(); ?>
-          <div class="col-md-6 offset-lg-1 p-0 d-none d-lg-block">
+          <div class="col-lg-6 offset-lg-1 p-0 text-center">
 
             <?php while ( $proc->have_posts() ) :  $proc->the_post();  ?>
               <?php $image = get_field('imagem', get_the_ID()); ?>
