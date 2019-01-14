@@ -98,10 +98,10 @@ get_header();
             ?>
             <section class="col-md-3" >
               <div class="home-proc__single" style="background: url('<?= $rosto['url']; ?>')">
-              <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-para-o-rosto/'); ?>" title="Saiba mais"> </a>
+              <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-face/'); ?>" title="Saiba mais"> </a>
                <div>
                 <h4 class="home-proc__title">
-                  <?= __('ROSTO', 'abdulay'); ?>
+                  <?= __('Face', 'abdulay'); ?>
                   </h4>
 
                   <footer class="home-proc__footer">
@@ -460,7 +460,8 @@ get_header();
     jQuery('.bxslider--depo').bxSlider({
       pager: false,
       auto: true,
-      pause: 8000
+      pause: 8000,
+      touchEnabled:false
     });
   });
   jQuery(document).ready(function(){
@@ -469,7 +470,8 @@ get_header();
       auto: true,
       nextText: " ",
       prevText: " ",
-      pause: 8000
+      pause: 8000,
+      touchEnabled:false
     });
   });
 </script>
