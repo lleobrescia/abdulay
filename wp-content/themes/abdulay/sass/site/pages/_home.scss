@@ -115,12 +115,14 @@
       top: 0;
       text-align: center;
       padding-top: 8px;
-      min-width: 525px;
+      max-width: 525px;
 
       @media screen and (min-width: 30rem) {
         padding-top: 0;
         text-align: initial;
         position: absolute;
+        min-width: 525px;
+        max-width: 100%;
       }
 
       @include media-breakpoint-up(lg) {
@@ -162,8 +164,7 @@
 
       p {
         color: #626462;
-        font-size: .6875rem;
-
+        font-size: .9375rem;
 
         @media screen and (min-width: 30rem) {
           max-width: 200px;
@@ -171,7 +172,6 @@
 
         @media screen and (min-width: 38.75rem) {
           max-width: 400px;
-          font-size: .9375rem;
         }
       }
     }
@@ -405,6 +405,7 @@
               margin-bottom: 49px;
               padding-right: 118px;
               min-height: 154px;
+              padding-left: 10px;
 
               @media screen and(min-width: 800px) {
                 min-height: 88px
