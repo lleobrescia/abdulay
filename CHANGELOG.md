@@ -15,5 +15,19 @@ All notable changes to this project will be documented in this file.
 
 ## [1.x.x - YYYY-MM-DD]
 
+## [1.1.1 - 2019-01-14]
+
+# Added
+- Image in each procedimento page
+- Collapse in FAQ
+- Dynamic submenu
+- Dynamic procedimento type
+
+
+# Fixed
+- Menu color and z-index
+- Submenu order
+- Small adjustments
+
 ## [1.1.0 - 2018-11-15]
 * Released
