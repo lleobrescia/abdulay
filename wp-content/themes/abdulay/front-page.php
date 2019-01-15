@@ -89,71 +89,40 @@ get_header();
             </div><!-- col-md-10 -->
           </div><!-- row -->
 
-          <section class="row">
+          <ul class="bxslider--proc">
             <?php
-            $rosto     = get_field('procedimento_rosto');
-            $corpo     = get_field('procedimento_corpo');
-            $mama      = get_field('procedimento_mama');
-            $esteticos = get_field('procedimento_esteticos');
+            // check if the repeater field has rows of data
+            if( have_rows('procedimentos') ):
+              // loop through the rows of data
+              while ( have_rows('procedimentos') ) : the_row();
             ?>
-            <section class="col-md-3" >
-              <div class="home-proc__single" style="background: url('<?= $rosto['url']; ?>')">
-              <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-face/'); ?>" title="Saiba mais"> </a>
-               <div>
-                <h4 class="home-proc__title">
-                  <?= __('Face', 'abdulay'); ?>
-                  </h4>
-
-                  <footer class="home-proc__footer">
-                    <hr>
-                    <a href="" title="Saiba mais"> <?= __('Saiba mais &gt;', 'abdulay'); ?></a>
-                  </footer><!-- home-proc__footer -->
-               </div>
-              </div><!-- home-proc__single -->
-            </section><!-- col-md-3 -->
-            <section class="col-md-3" >
-              <div class="home-proc__single" style="background: url('<?= $corpo['url']; ?>')">
-               <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-para-o-corpo/'); ?>" title="Saiba mais"> </a>
+            <li>
+              <section class="p-2">
+                <div class="home-proc__single" style="background: url('<?= get_sub_field('imagem')['url']; ?>')">
+                <a class="home-proc__link" href="<?= get_sub_field('link'); ?>" title="Saiba mais"> </a>
                 <div>
                   <h4 class="home-proc__title">
-                  <?= __('CORPO', 'abdulay'); ?>
+                    <?php the_sub_field('nome'); ?>
                   </h4>
-                  <footer class="home-proc__footer">
-                    <hr>
-                    <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
-                  </footer><!-- home-proc__footer -->
+
+                    <footer class="home-proc__footer">
+                      <hr>
+                        <a href="<?= get_sub_field('link'); ?>" title="Saiba mais"> <?= __('Saiba mais &gt;', 'abdulay'); ?>
+                      </a>
+                    </footer><!-- home-proc__footer -->
                 </div>
-              </div><!-- home-proc__single -->
-            </section><!-- col-md-3 -->
-            <section class="col-md-3" >
-             <div class="home-proc__single" style="background: url('<?= $mama['url']; ?>')">
-              <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-para-a-mama/'); ?>" title="Saiba mais"> </a>
-               <div>
-                <h4 class="home-proc__title">
-                <?= __('MAMA', 'abdulay'); ?>
-                </h4>
-                <footer class="home-proc__footer">
-                  <hr>
-                  <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
-                </footer><!-- home-proc__footer -->
-               </div>
-              </div><!-- home-proc__single -->
-            </section><!-- col-md-3 -->
-            <section class="col-md-3" >
-             <div class="home-proc__single" style="background: url('<?= $esteticos['url']; ?>')">
-              <a class="home-proc__link" href="<?= get_site_url(null, '/procedimentos-esteticos/'); ?>" title="Saiba mais"> </a>
-              <div>
-                <h4 class="home-proc__title">
-                  <?= __('ESTÉTICOS', 'abdulay'); ?>
-                </h4>
-                <footer class="home-proc__footer">
-                  <hr>
-                  <a href="" title="Saiba mais"><?= __('Saiba mais &gt;', 'abdulay'); ?></a>
-                </footer><!-- home-proc__footer -->
-              </div>
-              </div><!-- home-proc__single -->
-            </section><!-- col-md-3 -->
-          </div><!-- row -->
+                </div><!-- home-proc__single -->
+              </section><!-- col-md-3 -->
+            </li>
+            <?php
+              endwhile;
+            else :
+                // no rows found
+            endif;
+            ?>
+
+          </ul>
+
         </div><!-- container -->
       </section><!-- home-proc -->
     </main><!-- #main -->
@@ -456,24 +425,101 @@ get_header();
     }
   </script>
 <script>
-  jQuery(document).ready(function(){
-    jQuery('.bxslider--depo').bxSlider({
+ jQuery(document).ready(function () {
+  var firstItemNumber = 4;
+  carouselItemMaxWidth = 5000; // Insert Random Number > Max Width Of Item
+  carouselMoveSlides = 1;
+  carouselSelector = ".bxslider--proc";
+  carouselTotalItem = jQuery(carouselSelector).find(" > li").size();
+  var slider = jQuery(carouselSelector).bxSlider();
+
+  if (jQuery(window).width() > 797) {
+    firstItemNumber = 4;
+  }
+  if (jQuery(window).width() < 796) {
+    firstItemNumber = 2;
+  }
+  if (jQuery(window).width() < 536) {
+    firstItemNumber = 1;
+  }
+
+  if (carouselTotalItem >= firstItemNumber) {
+    jQuery(carouselSelector).removeClass("carousel-destroy-style");
+    slider.reloadSlider({
       pager: false,
-      auto: true,
+      controls: true,
+      auto: false,
+      slideWidth: 5000,
+      shrinkItems: true,
       pause: 8000,
-      touchEnabled:false
+      preloadImages: "all",
+      touchEnabled: false,
+      maxSlides: firstItemNumber,
+      minSlides: firstItemNumber,
+      moveSlides: carouselMoveSlides,
+      slideWidth: carouselItemMaxWidth
     });
+  } else {
+    slider.destroySlider();
+    jQuery(carouselSelector).addClass("carousel-destroy-style").removeAttr("style").find(" > li").removeAttr("style");
+  }
+
+  jQuery(window).resize(function () {
+    carouselListReloadInit();
   });
-  jQuery(document).ready(function(){
-    jQuery('.bxslider--slide').bxSlider({
-      pager: false,
-      auto: true,
-      nextText: " ",
-      prevText: " ",
-      pause: 8000,
-      touchEnabled:false
-    });
+
+  function carouselListReloadInit() {
+    if (jQuery(window).width() > 797) {
+      carouselOptionReload(4, carouselMoveSlides, carouselItemMaxWidth);
+    }
+    if (jQuery(window).width() < 796) {
+      carouselOptionReload(2, carouselMoveSlides, carouselItemMaxWidth);
+    }
+    if (jQuery(window).width() < 536) {
+      carouselOptionReload(1, carouselMoveSlides, carouselItemMaxWidth);
+    }
+  }
+
+  function carouselOptionReload(minMaxItem, moveItem, itemMaxWidth) {
+    if (carouselTotalItem >= minMaxItem) {
+      jQuery(carouselSelector).removeClass("carousel-destroy-style");
+      slider.reloadSlider({
+        pager: false,
+        controls: true,
+        auto: false,
+        slideWidth: 5000,
+        shrinkItems: true,
+        pause: 8000,
+        preloadImages: "all",
+        touchEnabled: false,
+        maxSlides: minMaxItem,
+        minSlides: minMaxItem,
+        moveSlides: moveItem,
+        slideWidth: itemMaxWidth
+      });
+    } else {
+      slider.destroySlider();
+      jQuery(carouselSelector).addClass("carousel-destroy-style").removeAttr("style").find(" > li").removeAttr("style");
+    }
+  }
+
+  jQuery('.bxslider--depo').bxSlider({
+    pager: false,
+    auto: true,
+    pause: 8000,
+    touchEnabled: false
   });
+
+  jQuery('.bxslider--slide').bxSlider({
+    pager: false,
+    auto: true,
+    nextText: " ",
+    prevText: " ",
+    pause: 8000,
+    touchEnabled: false
+  });
+
+});
 </script>
 <style type="text/css">
   /* Set a size for our map container, the Google Map will take up 100% of this container */
