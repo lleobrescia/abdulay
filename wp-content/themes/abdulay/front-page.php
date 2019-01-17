@@ -166,8 +166,8 @@ get_header();
                 ?>
               </ul>
             </div><!-- home-depo__container -->
-              <a href="<?= get_site_url(null, '/envie-seu-depoimento/'); ?>" class="chamada__button btn btn-outline-primary float-right">
-              clique aqui para enviar um depoimento </a>
+              <a href="<?= get_site_url(null, '/envie-seu-depoimento/'); ?>" class="btn btn-outline-primary chamada__button float-right mb-5 mb-md-0">
+              DEIXE SEU DEPOIMENTO </a>
           </div>
         </div><!-- row -->
       </div><!-- container -->
