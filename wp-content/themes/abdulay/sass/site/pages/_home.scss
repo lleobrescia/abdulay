@@ -72,16 +72,17 @@
       }
 
       .bx-controls-direction {
-        bottom: 56px;
         position: absolute;
         right: -10px;
         width: 100%;
+        top: 125px;
 
         @media screen and (min-width: 30rem) {
           bottom: 63px;
           position: absolute;
           right: 627px;
           width: 75px;
+          top: initial;
         }
 
         @media screen and (min-width: 66.125rem) {
@@ -134,7 +135,7 @@
       &::before {
         background: #f2f1ef;
         content: "";
-        height: 401px;
+        height: 100vh;
         left: 0;
         position: absolute;
         width: 100%;
@@ -242,6 +243,10 @@
   &-proc {
     position: relative;
 
+    .bxslider--proc {
+      margin: auto;
+    }
+
     &::before {
       background: url("images/proc-bg.png") no-repeat center;
       content: "";
@@ -255,15 +260,16 @@
         display: none;
       }
     }
+
     .bx-wrapper {
       background-color: transparent;
 
       .bx-next {
-        background: url("images/right-arrow-blue.png") no-repeat;
+        background: url("images/right-arrow-blue.png") no-repeat right;
       }
 
       .bx-prev {
-        background: url("images/left-arrow-blue.png") no-repeat;
+        background: url("images/left-arrow-blue.png") no-repeat left;
       }
     }
 

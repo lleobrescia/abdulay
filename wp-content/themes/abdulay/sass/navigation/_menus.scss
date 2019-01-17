@@ -17,11 +17,14 @@
 
   &-abdulay {
     margin-top: 5px;
-    margin-bottom: 70px;
     padding-top: 64px;
 
     @media screen and(min-width: 30rem) {
       padding-top: 30px;
+    }
+
+    @media screen and(min-width: 50rem) {
+      margin-bottom: 70px;
     }
 
     .navbar-nav {
